@@ -8,9 +8,9 @@ El proyecto tiene como objetivo desarrollar una api utilizando Express y MongoDb
 
 ## Integrantes del Equipo
 
-- **Jorge**
-- **Celia**
-- **Rubén**
+- **Jorge Otero Gonzalez**
+- **Celia Becerril Riaño**
+- **Rubén Setién Fernández**
 
 ## Contribuciones
 
