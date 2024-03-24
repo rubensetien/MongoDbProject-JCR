@@ -53,26 +53,112 @@ INSERT INTO `athlete` (`_id`, `name`, `country`, `age`, `gender`, `sport`, `meda
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `country`
+-- Estructura de tabla para la tabla country
 --
 
-DROP TABLE IF EXISTS `country`;
-CREATE TABLE IF NOT EXISTS `country` (
-  `country` varchar(20) NOT NULL,
-  `acronym` varchar(3) NOT NULL,
-  `flag` blob,
-  `capital` varchar(20) NOT NULL,
-  `population` varchar(255) NOT NULL,
-  `representatives` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'still to be determined',
-  PRIMARY KEY (`country`)
+DROP TABLE IF EXISTS country;
+
+CREATE TABLE IF NOT EXISTS country (
+  country varchar(20) NOT NULL,
+  acronym varchar(3) NOT NULL,
+  flag blob,
+  capital varchar(20) NOT NULL,
+  population varchar(255) NOT NULL,
+  representatives varchar(150) NOT NULL DEFAULT 'still to be determined',
+  PRIMARY KEY (country)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 --
 -- Volcado de datos para la tabla `country`
 --
 
-INSERT INTO `country` (`country`, `acronym`, `flag`, `capital`, `population`, `representatives`) VALUES
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
 ('Spain', 'ESP', NULL, 'Madrid', '47.420.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('United States of America', 'USA', NULL, 'Washington D.C.', '331.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('South Africa', 'ZAF', NULL, 'Pretoria', '59.620.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Canada', 'CAN', NULL, 'Ottawa', '38.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('Cuba', 'CUB', NULL, 'La Habana', '11.200.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Greece', 'GRC', NULL, 'Athens', '10.400.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('Sweeden', 'SWE', NULL, 'Stockholm', '10.400.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Jamaica', 'JAM', NULL, 'Kingston', '2.900.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('United Kingdom', 'GBR', NULL, 'London', '77.300.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('France', 'FRA', NULL, 'Paris', '67.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Australia', 'AUS', NULL, 'Canberra', '25.650.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Italy', 'ITA', NULL, 'Rome', '59.110.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Slovenia', 'SVN', NULL, 'Ljubljana', '2.100.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('Germany', 'DEU', NULL, 'Berlin', '83.200.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Norway', 'NOR', NULL, 'Oslo', '5.400.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('Denmark', 'DNK', NULL, 'Copenhagen', '5.800.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('Netherlands', 'NLD', NULL, 'Amsterdam', '17.500.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('China', 'CHN', NULL, 'Beijing', '1.400.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Türkiye', 'TUR', NULL, 'Ankara', '82.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Brazil', 'BRA', NULL, 'Brasilia', '212.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('South Korea', 'KOR', NULL, 'Seoul', '51.800.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Serbia', 'SRB', NULL, 'Belgrade', '7.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('Japan', 'JPN', NULL, 'Tokyo', '126.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('Belarus', 'BLR', NULL, 'Minsk', '9.400.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives)VALUES
+('Poland', 'POL', NULL, 'Warsaw', '38.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Colombia', 'COL', NULL, 'Bogotá', '50.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Ecuador', 'ECU', NULL, 'Quito', '17.000.000', 'still to be determined');
+
+INSERT INTO country (country, acronym, flag, capital, population, representatives) VALUES
+('Belgium', 'BEL', NULL, 'Brussels', '11.500.000', 'still to be determined');
+
+
+
 
 -- --------------------------------------------------------
 
