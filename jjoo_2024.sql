@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 25-03-2024 a las 12:07:14
+-- Tiempo de generación: 25-03-2024 a las 22:08:26
 -- Versión del servidor: 8.0.36
 -- Versión de PHP: 8.2.13
 
@@ -32,8 +32,9 @@ CREATE TABLE IF NOT EXISTS `athlete` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `country` varchar(50) NOT NULL,
+  `team` tinyint UNSIGNED DEFAULT NULL,
   `age` tinyint NOT NULL,
-  `gender` enum('male','female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `gender` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `modality` tinyint NOT NULL,
   `medals` tinyint NOT NULL DEFAULT '0',
   `record` varchar(255) NOT NULL,
@@ -41,17 +42,57 @@ CREATE TABLE IF NOT EXISTS `athlete` (
   PRIMARY KEY (`id`),
   KEY `country` (`country`),
   KEY `sport` (`modality`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `athlete`
 --
 
-INSERT INTO `athlete` (`id`, `name`, `country`, `age`, `gender`, `modality`, `medals`, `record`, `picture`) VALUES
-(1, 'Trayvon Bromell', 'United States of Ame', 28, 'male', 1, 3, '1 gols, 2 bronzes', NULL),
-(2, 'Akani Simbine', 'South Africa', 30, 'male', 1, 1, '1 gold', NULL),
-(3, 'Ronnie Baker', 'United States of Ame', 30, 'male', 1, 1, '1 bronze', NULL),
-(4, 'Andre De Grasse', 'Canada', 29, 'male', 1, 11, '2 golds, 3 silvers, 6 bronzes', NULL);
+INSERT INTO `athlete` (`id`, `name`, `country`, `team`, `age`, `gender`, `modality`, `medals`, `record`, `picture`) VALUES
+(1, 'Trayvon Bromell', 'United States of Ame', NULL, 28, 'Male', 1, 0, '1 gold, 2 bronzes', NULL),
+(2, 'Akani Simbine', 'South Africa', NULL, 30, 'Male', 1, 0, '1 gold', NULL),
+(3, 'Ronnie Baker', 'United States of Ame', NULL, 30, 'Male', 1, 0, '1 bronze', NULL),
+(4, 'Andre De Grasse', 'Canada', NULL, 29, 'Male', 1, 0, '2 golds, 3 silvers, 6 bronzes', NULL),
+(5, 'Juan Miguel Echevarría', 'Cuba', NULL, 25, 'Male', 2, 0, '1 gold, 1 silver, 1 bronze', NULL),
+(6, 'Miltiadis Tentoglou', 'Greece', NULL, 26, 'Male', 2, 0, '10 golds, 1 silver', NULL),
+(7, 'Thobias Montler', 'Sweden', NULL, 28, 'Male', 2, 0, '5 silvers', NULL),
+(8, 'Jeff Henderson', 'United States of Ame', NULL, 35, 'Male', 2, 0, '1 gold, 1 silver', NULL),
+(9, 'Sarah Sjöström', 'Sweden', NULL, 30, 'Female', 4, 0, '16 golds, 6 silvers, 5 bronzes', NULL),
+(10, 'Cate Campbell', 'Australia', NULL, 31, 'Female', 4, 0, '17 golds, 6 silvers, 6 bronzes', NULL),
+(11, 'Emma McKeon', 'Australia', NULL, 29, 'Female', 4, 0, '18 golds, 13 silvers, 10 bronzes', NULL),
+(12, 'Penny Oleksiak', 'Canada', NULL, 23, 'Female', 4, 0, '3 golds, 5 silvers, 12 bronzes', NULL),
+(13, 'Federica Pellegrini', 'Italy', NULL, 35, 'Female', 4, 0, '28 golds, 28 silvers, 19 bronzes', NULL),
+(14, 'Liu Yang', 'China', NULL, 29, 'Male', 11, 0, '4 golds, 1 silver, 4 bronzes', NULL),
+(15, 'Ibrahim Çolak', 'Türkiye', NULL, 29, 'Male', 11, 0, '1 gold', NULL),
+(16, 'Arthur Zaneti', 'Brazil', NULL, 33, 'Male', 11, 0, '5 golds, 4 silvers', NULL),
+(17, 'Eleftherios Petrounias', 'Greece', NULL, 33, 'Male', 11, 0, '11 golds, 1 silver, 3 bronzes', NULL),
+(18, 'Simon Billes', 'United States of Ame', NULL, 27, 'Female', 12, 0, '27 golds, 5 silvers, 5 bronzes', NULL),
+(19, 'Rebeca Andrade', 'Brazil', NULL, 24, 'Female', 12, 0, '4 golds, 6 silvers, 2 bronzes', NULL),
+(20, 'Jade Carey', 'United States of Ame', NULL, 23, 'Female', 12, 0, '4 golds, 3 silvers, 1 bronze', NULL),
+(21, 'Yeo Seo-jeong', 'South Korea', NULL, 22, 'Female', 12, 0, '2 bronzes', NULL),
+(22, 'Novak Djokovic\r\n', 'Serbia', NULL, 36, 'Male', 15, 0, '24 Grand Slam, 12 runner-up Grand Slam, 1 Olympic bronze\r\n', NULL),
+(23, 'Stefanos Tsitsipas\r\n', 'Greece', NULL, 25, 'Male', 15, 0, ' 2 runner-up Grand Slam\r\n', NULL),
+(24, 'Carlos Alcaraz\r\n', 'Spain', NULL, 20, 'Male', 15, 0, ' 2 Grand Slam\r\n', NULL),
+(25, 'Alexander Zverev\r\n', 'Germany', NULL, 26, 'Male', 15, 0, ' 1 runner-up Grand Slam, 1 gold at the Olympics\r\n', NULL),
+(26, 'Naomi Osaka', 'Japan', NULL, 26, 'Female', 16, 0, '4 Grand Slams', NULL),
+(27, 'Aryna Sabalenka', 'Belarus', NULL, 25, 'Female', 16, 0, '4 Grand Slams, 1 runner-up Grand Slam', NULL),
+(28, 'Iga Swiatek', 'Poland', NULL, 22, 'Female', 16, 0, '4 Grand Slams, 1 runner-up Grand Slam', NULL),
+(30, 'Lutalo Muhammad', 'United Kingdom', NULL, 32, 'Male', 19, 0, '1 gold, 1 silver, 3 bronzes', NULL),
+(31, 'Cha Dong-min', 'South Korea', NULL, 37, 'Male', 19, 0, '2 golds, 1 silver, 1 bronze', NULL),
+(32, 'Servet Tazwgül', 'Türkiye', NULL, 35, 'Male', 19, 0, '8 gold, 2 bronzes', NULL),
+(33, 'Joel González', 'Spain', NULL, 34, 'Male', 19, 0, '5 golds, 1 silver, 3 bronzes', NULL),
+(35, 'Jade Jones', 'Great Britain', NULL, 31, 'Female', 20, 0, '8 golds, 2 silvers, 5 bronzes', NULL),
+(36, 'Wu Jingyu', 'China', NULL, 37, 'Female', 20, 0, '8 golds, 4 silvers, 2 bronzes', NULL),
+(37, 'Bianca Walkden', 'Great Britain', NULL, 32, 'Female', 20, 0, '7 golds, 1 silver, 4 bronzes', NULL),
+(38, 'Kim So-hui', 'South Korea', NULL, 30, 'Female', 20, 0, '4 golds, 1 bronze', NULL),
+(39, 'Mikel Landa', 'Spain', NULL, 34, 'Male', 23, 0, ' ', NULL),
+(40, 'Santiago Buitrago', 'Colombia', NULL, 24, 'Male', 23, 0, ' ', NULL),
+(41, 'Richard Carapaz', 'Ecuador', NULL, 30, 'Male', 23, 0, '1 Tour of Italy, 1 Tour of Switzerland, 1 gold JJ.OO, 1 Ecuador in Road Race ', NULL),
+(42, 'Thomas Pidcock', 'Great Britain', NULL, 24, 'Male', 23, 0, '1 Strade Bianche, 1 Flecha Brabanzona', NULL),
+(43, 'Primoz Roglic', 'Slovenia', NULL, 34, 'Male', 24, 0, '1 gold JJ.OO, 1 Paris-Niza, 3 Tour of Spain, 1 Tour of Italy', NULL),
+(44, 'Remco Evenepoel', 'Belgium', NULL, 24, 'Male', 24, 0, '1 Tour of Spain, 1 Tour of Poland, 1 Belgium Time Trial', NULL),
+(45, 'Filippo Ganna', 'Italy', NULL, 27, 'Male', 24, 0, '4 Italy time trial, 2 World Time Trial Championship, 1 gold JJ.OO', NULL),
+(46, 'Joshua Tarling', 'Great Britain', NULL, 20, 'Male', 24, 0, '4 European Time Trial Championship, 1 United Kingdom ITT', NULL);
 
 -- --------------------------------------------------------
 
@@ -75,31 +116,35 @@ CREATE TABLE IF NOT EXISTS `country` (
 --
 
 INSERT INTO `country` (`country`, `acronym`, `flag`, `capital`, `population`, `representatives`) VALUES
-('Australia', 'AUS', NULL, 'Canberra', '25.650.000', 'still to be determined'),
-('Belarus', 'BLR', NULL, 'Minsk', '9.400.000', 'still to be determined'),
-('Belgium', 'BEL', NULL, 'Brussels', '11.500.000', 'still to be determined'),
-('Brazil', 'BRA', NULL, 'Brasilia', '212.000.000', 'still to be determined'),
-('Canada', 'CAN', NULL, 'Ottawa', '38.000.000', 'still to be determined'),
-('China', 'CHN', NULL, 'Beijing', '1.400.000.000', 'still to be determined'),
-('Colombia', 'COL', NULL, 'Bogotá', '50.000.000', 'still to be determined'),
-('Cuba', 'CUB', NULL, 'La Habana', '11.200.000', 'still to be determined'),
-('Denmark', 'DNK', NULL, 'Copenhagen', '5.800.000', 'still to be determined'),
-('Ecuador', 'ECU', NULL, 'Quito', '17.000.000', 'still to be determined'),
-('France', 'FRA', NULL, 'Paris', '67.000.000', 'still to be determined'),
-('Germany', 'DEU', NULL, 'Berlin', '83.200.000', 'still to be determined'),
-('Greece', 'GRC', NULL, 'Athens', '10.400.000', 'still to be determined'),
-('Italy', 'ITA', NULL, 'Rome', '59.110.000', 'still to be determined'),
-('Jamaica', 'JAM', NULL, 'Kingston', '2.900.000', 'still to be determined'),
-('Japan', 'JPN', NULL, 'Tokyo', '126.000.000', 'still to be determined'),
-('Netherlands', 'NLD', NULL, 'Amsterdam', '17.500.000', 'still to be determined'),
-('Norway', 'NOR', NULL, 'Oslo', '5.400.000', 'still to be determined'),
-('Poland', 'POL', NULL, 'Warsaw', '38.000.000', 'still to be determined'),
-('Serbia', 'SRB', NULL, 'Belgrade', '7.000.000', 'still to be determined'),
-('Slovenia', 'SVN', NULL, 'Ljubljana', '2.100.000', 'still to be determined'),
-('South Africa', 'ZAF', NULL, 'Pretoria', '59.620.000', 'still to be determined'),
-('South Korea', 'KOR', NULL, 'Seoul', '51.800.000', 'still to be determined'),
-('Spain', 'ESP', NULL, 'Madrid', '47.420.000', 'still to be determined'),
-('Sweden', 'SWE', NULL, 'Stockholm', '10.400.000', 'still to be determined'),
+('Australia', 'AUS', NULL, 'Canberra', '25.650.000', 'Still to be determined'),
+('Belarus', 'BLR', NULL, 'Minsk', '9.400.000', 'Still to be determined\r\n'),
+('Belgium', 'BEL', NULL, 'Brussels', '11.500.000', 'Still to be determined'),
+('Brazil', 'BRA', NULL, 'Brasilia', '212.000.000', 'Still to be determined'),
+('Canada', 'CAN', NULL, 'Ottawa', '38.000.000', 'Still to be determined'),
+('China', 'CHN', NULL, 'Beijing', '1.400.000.000', 'Still to be determined'),
+('Colombia', 'COL', NULL, 'Bogotá', '50.000.000', 'Still to be determined'),
+('Croatia', 'HRV', NULL, 'Zagrev', '3 899 000', 'still to be determined'),
+('Cuba', 'CUB', NULL, 'La Habana', '11.200.000', 'Still to be determined'),
+('Denmark', 'DNK', NULL, 'Copenhagen', '5.800.000', 'Still to be determined'),
+('Ecuador', 'ECU', NULL, 'Quito', '17.000.000', 'Still to be determined'),
+('England', 'ENG', NULL, 'London', '55 980 000', 'still to be determined'),
+('France', 'FRA', NULL, 'Paris', '67.000.000', 'Still to be determined'),
+('Germany', 'DEU', NULL, 'Berlin', '83.200.000', 'Still to be determined'),
+('Great Britain', 'GBR', NULL, 'London', '66970000', 'Still to be determined'),
+('Greece', 'GRC', NULL, 'Athens', '10.400.000', 'Still to be determined'),
+('Hungary', 'HUN', NULL, 'Budapest', '9 710 000', 'still to be determined'),
+('Italy', 'ITA', NULL, 'Rome', '59.110.000', 'Still to be determined'),
+('Jamaica', 'JAM', NULL, 'Kingston', '2.900.000', 'Still to be determined'),
+('Japan', 'JPN', NULL, 'Tokyo', '126.000.000', 'Still to be determined'),
+('Netherlands', 'NLD', NULL, 'Amsterdam', '17.500.000', 'Still to be determined'),
+('Norway', 'NOR', NULL, 'Oslo', '5.400.000', 'Still to be determined'),
+('Poland', 'POL', NULL, 'Warsaw', '38.000.000', 'Still to be determined'),
+('Serbia', 'SRB', NULL, 'Belgrade', '7.000.000', 'Still to be determined'),
+('Slovenia', 'SVN', NULL, 'Ljubljana', '2.100.000', 'Still to be determined'),
+('South Africa', 'ZAF', NULL, 'Pretoria', '59.620.000', 'Still to be determined'),
+('South Korea', 'KOR', NULL, 'Seoul', '51.800.000', 'Still to be determined'),
+('Spain', 'ESP', NULL, 'Madrid', '47.420.000', 'Still to be determined'),
+('Sweden', 'SWE', NULL, 'Stockholm', '10.400.000', 'Still to be determined'),
 ('Türkiye', 'TUR', NULL, 'Ankara', '82.000.000', 'still to be determined'),
 ('United Kingdom', 'GBR', NULL, 'London', '77.300.000', 'still to be determined'),
 ('United States of Ame', 'USA', NULL, 'Washington D.C.', '331.000.000', 'still to be determined');
@@ -115,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `modality` (
   `id` tinyint NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `sport_id` tinyint NOT NULL,
-  `category` enum('masc','fem','mixed') NOT NULL,
+  `category` enum('Masc','Fem','Mixed') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `start_date` date NOT NULL,
   `end_date` date NOT NULL,
   `venue_id` tinyint NOT NULL,
@@ -134,28 +179,28 @@ CREATE TABLE IF NOT EXISTS `modality` (
 --
 
 INSERT INTO `modality` (`id`, `name`, `sport_id`, `category`, `start_date`, `end_date`, `venue_id`, `description`, `result`, `status`, `transmission`, `picture`) VALUES
-(1, '100 Metros', 1, 'masc', '2024-08-03', '2024-08-04', 1, 'Carrera en la que se tienen que recorrer 100 metros en un suelo nivelado, libres de todo obstáculo, con la mayor rapidez posible', '', 'scheduled', 'tv_channel', NULL),
-(2, 'Long jump', 1, 'masc', '2024-08-02', '2024-08-06', 3, '', '', 'scheduled', 'tv_channel', NULL),
-(3, ' 4 x 100 meters relay', 1, 'masc', '2024-08-08', '2024-08-10', 3, 'The test consists of a race in which four runners take part, in which each one of them completes a distance of 100 meters.', '', 'scheduled', 'tv_channel', NULL),
-(4, '100 metre freestyle', 2, 'fem', '2024-07-30', '2024-07-31', 5, 'The 100m freestyle swimming event is a fast-paced race where swimmers employ any technique to complete the distance in the shortest time possible, focusing on speed and efficiency of stroke, kick, and breathing.', '', 'scheduled', 'tv_channel', NULL),
-(5, 'Open water', 2, 'masc', '2024-08-09', '2024-08-09', 4, 'The men\'s open water swimming event is a challenging race covering varying distances in natural bodies of water, testing endurance and navigation skills', '', 'scheduled', 'tv_channel', NULL),
-(6, 'Open water', 2, 'fem', '2024-08-08', '2024-08-08', 4, 'The women\'s open water swimming event is a demanding race held in natural bodies of water, testing endurance, navigation, and strategic skills over varying distances.', '', 'scheduled', 'tv_channel', NULL),
-(7, 'Basketball', 3, 'masc', '2024-03-27', '2024-08-10', 17, 'The men\'s basketball event showcases elite athleticism and teamwork as teams compete for victory in a fast-paced, high-energy game on the court.', '', 'scheduled', 'tv_channel', NULL),
-(8, 'Basketball', 3, 'fem', '2024-07-28', '2024-08-11', 17, 'The women\'s basketball competition highlights skill, strategy, and teamwork, where players exhibit finesse and determination to outscore opponents in an intense and dynamic game.', '', 'scheduled', 'tv_channel', NULL),
-(9, 'Handball', 4, 'masc', '2024-07-27', '2024-08-11', 27, 'The men\'s handball competition features fast-paced action and strategic gameplay, as teams battle for dominance on the court using skillful passing, shooting, and defensive maneuvers.', '', 'scheduled', 'tv_channel', NULL),
-(10, 'Handball', 4, 'fem', '2024-07-25', '2024-08-10', 26, 'The women\'s handball event showcases agility, precision, and teamwork, as players demonstrate remarkable coordination in attack and defense to secure victory in a thrilling and dynamic competition.', '', 'scheduled', 'tv_channel', NULL),
-(11, 'rings', 5, 'masc', '2024-07-27', '2024-08-04', 17, 'The men\'s still rings event in artistic gymnastics demonstrates unparalleled strength, control, and precision as gymnasts perform breathtaking routines showcasing incredible upper body strength and stability.', '', 'scheduled', 'platform', NULL),
-(12, ' vault ', 5, 'masc', '2024-07-27', '2024-08-04', 17, 'The men\'s vault event in artistic gymnastics showcases explosive power, agility, and precision as gymnasts execute dynamic maneuvers, including flips and twists, with impeccable technique and control.', '', 'scheduled', 'platform', NULL),
-(15, 'Single tenis', 6, 'masc', '2024-07-27', '2024-08-04', 11, 'Men\'s singles tennis: Individual skill, strategy, athleticism in intense matches, showcasing power, precision, mental fortitude.', '', 'scheduled', 'tv_channel', NULL),
-(16, 'Single tenis', 6, 'fem', '2024-07-27', '2024-08-03', 11, 'Women\'s singles tennis: A display of finesse, power, and tactical brilliance in high-stakes matches, showcasing athleticism and mental resilience on the court.', '', 'scheduled', 'tv_channel', NULL),
-(17, 'Football', 7, 'masc', '2024-07-24', '2024-08-09', 10, 'Men\'s soccer: A dynamic display of skill, teamwork, and strategy as teams compete for goals in fast-paced matches on the pitch.', '', 'scheduled', 'tv_channel', NULL),
-(18, 'Football', 7, 'fem', '2024-07-25', '2024-08-10', 10, 'Women\'s soccer: Showcasing teamwork, skill, and determination as players navigate the pitch in thrilling matches, aiming for goals and victory.', '', 'scheduled', 'tv_channel', NULL),
-(19, 'Single fight +80', 8, 'masc', '2024-08-10', '2024-08-10', 18, 'Men\'s individual taekwondo +80kg: A showcase of power, agility, and strategy as competitors engage in dynamic combat, aiming for precise strikes and defensive maneuvers to secure victory.', '', 'scheduled', 'platform', NULL),
-(20, 'Single fight -69', 8, 'fem', '2024-08-09', '2024-08-09', 18, 'Women\'s individual taekwondo -69kg: A display of agility, technique, and mental focus as athletes engage in intense combat, executing precise kicks and defensive tactics to outmaneuver opponents and claim victory', '', 'scheduled', 'platform', NULL),
-(21, 'Waterpolo', 9, 'masc', '2024-07-28', '2024-08-11', 5, 'Men\'s water polo: A thrilling display of athleticism, teamwork, and strategy as players battle in the pool, aiming to outmaneuver opponents and score goals to claim victory.', '', 'scheduled', 'tv_channel', NULL),
-(22, 'Waterpolo', 9, 'fem', '2024-07-27', '2024-08-10', 7, 'Women\'s water polo: An intense showcase of skill, teamwork, and endurance as athletes compete in the pool, utilizing strategy and precision to outplay opponents and secure goals for victory.', '', 'scheduled', 'tv_channel', NULL),
-(23, 'Single route', 10, 'masc', '2024-08-03', '2024-08-03', 21, 'Road cycling: A test of endurance, tactics, and speed as cyclists navigate diverse terrains, strategizing to outpace rivals and cross the finish line first.', '', 'scheduled', 'tv_channel', NULL),
-(24, 'time trial route', 10, 'masc', '2024-07-27', '2024-07-27', 4, 'Individual time trial: Cyclists race against the clock, showcasing stamina, strategy, and speed as they tackle the course solo, aiming for the fastest time to secure victory.', '', 'scheduled', 'tv_channel', NULL);
+(1, '100 Meters', 1, 'Masc', '2024-08-03', '2024-08-04', 1, 'Race in which one must cover 100 meters on a level surface, free from any obstacles, as quickly as possible.', '', 'scheduled', 'tv_channel', NULL),
+(2, 'Long jump', 1, 'Masc', '2024-08-02', '2024-08-06', 3, 'The long jump is a track and field event where athletes sprint and then jump as far as they can from a designated point', '', 'scheduled', 'tv_channel', NULL),
+(3, ' 4 x 100 meters relay', 1, 'Masc', '2024-08-08', '2024-08-10', 3, 'The test consists of a race in which four runners take part, in which each one of them completes a distance of 100 meters.', '', 'scheduled', 'tv_channel', NULL),
+(4, '100 metre freestyle', 2, 'Fem', '2024-07-30', '2024-07-31', 5, 'The 100m freestyle swimming event is a fast-paced race where swimmers employ any technique to complete the distance in the shortest time possible, focusing on speed and efficiency of stroke, kick, and breathing.', '', 'scheduled', 'tv_channel', NULL),
+(5, 'Open water', 2, 'Masc', '2024-08-09', '2024-08-09', 4, 'The men\'s open water swimming event is a challenging race covering varying distances in natural bodies of water, testing endurance and navigation skills', '', 'scheduled', 'tv_channel', NULL),
+(6, 'Open water', 2, 'Fem', '2024-08-08', '2024-08-08', 4, 'The women\'s open water swimming event is a demanding race held in natural bodies of water, testing endurance, navigation, and strategic skills over varying distances.', '', 'scheduled', 'tv_channel', NULL),
+(7, 'Basketball', 3, 'Masc', '2024-03-27', '2024-08-10', 17, 'The men\'s basketball event showcases elite athleticism and teamwork as teams compete for victory in a fast-paced, high-energy game on the court.', '', 'scheduled', 'tv_channel', NULL),
+(8, 'Basketball', 3, 'Fem', '2024-07-28', '2024-08-11', 17, 'The women\'s basketball competition highlights skill, strategy, and teamwork, where players exhibit finesse and determination to outscore opponents in an intense and dynamic game.', '', 'scheduled', 'tv_channel', NULL),
+(9, 'Handball', 4, 'Masc', '2024-07-27', '2024-08-11', 27, 'The men\'s handball competition features fast-paced action and strategic gameplay, as teams battle for dominance on the court using skillful passing, shooting, and defensive maneuvers.', '', 'scheduled', 'tv_channel', NULL),
+(10, 'Handball', 4, 'Fem', '2024-07-25', '2024-08-10', 26, 'The women\'s handball event showcases agility, precision, and teamwork, as players demonstrate remarkable coordination in attack and defense to secure victory in a thrilling and dynamic competition.', '', 'scheduled', 'tv_channel', NULL),
+(11, 'rings', 5, 'Masc', '2024-07-27', '2024-08-04', 17, 'The men\'s still rings event in artistic gymnastics demonstrates unparalleled strength, control, and precision as gymnasts perform breathtaking routines showcasing incredible upper body strength and stability.', '', 'scheduled', 'platform', NULL),
+(12, ' vault ', 5, 'Masc', '2024-07-27', '2024-08-04', 17, 'The men\'s vault event in artistic gymnastics showcases explosive power, agility, and precision as gymnasts execute dynamic maneuvers, including flips and twists, with impeccable technique and control.', '', 'scheduled', 'platform', NULL),
+(15, 'Single tenis', 6, 'Masc', '2024-07-27', '2024-08-04', 11, 'Men\'s singles tennis: Individual skill, strategy, athleticism in intense matches, showcasing power, precision, mental fortitude.', '', 'scheduled', 'tv_channel', NULL),
+(16, 'Single tenis', 6, 'Fem', '2024-07-27', '2024-08-03', 11, 'Women\'s singles tennis: A display of finesse, power, and tactical brilliance in high-stakes matches, showcasing athleticism and mental resilience on the court.', '', 'scheduled', 'tv_channel', NULL),
+(17, 'Football', 7, 'Masc', '2024-07-24', '2024-08-09', 10, 'Men\'s soccer: A dynamic display of skill, teamwork, and strategy as teams compete for goals in fast-paced matches on the pitch.', '', 'scheduled', 'tv_channel', NULL),
+(18, 'Football', 7, 'Fem', '2024-07-25', '2024-08-10', 10, 'Women\'s soccer: Showcasing teamwork, skill, and determination as players navigate the pitch in thrilling matches, aiming for goals and victory.', '', 'scheduled', 'tv_channel', NULL),
+(19, 'Single fight +80', 8, 'Masc', '2024-08-10', '2024-08-10', 18, 'Men\'s individual taekwondo +80kg: A showcase of power, agility, and strategy as competitors engage in dynamic combat, aiming for precise strikes and defensive maneuvers to secure victory.', '', 'scheduled', 'platform', NULL),
+(20, 'Single fight -69', 8, 'Fem', '2024-08-09', '2024-08-09', 18, 'Women\'s individual taekwondo -69kg: A display of agility, technique, and mental focus as athletes engage in intense combat, executing precise kicks and defensive tactics to outmaneuver opponents and claim victory', '', 'scheduled', 'platform', NULL),
+(21, 'Waterpolo', 9, 'Masc', '2024-07-28', '2024-08-11', 5, 'Men\'s water polo: A thrilling display of athleticism, teamwork, and strategy as players battle in the pool, aiming to outmaneuver opponents and score goals to claim victory.', '', 'scheduled', 'tv_channel', NULL),
+(22, 'Waterpolo', 9, 'Fem', '2024-07-27', '2024-08-10', 7, 'Women\'s water polo: An intense showcase of skill, teamwork, and endurance as athletes compete in the pool, utilizing strategy and precision to outplay opponents and secure goals for victory.', '', 'scheduled', 'tv_channel', NULL),
+(23, 'Single route', 10, 'Masc', '2024-08-03', '2024-08-03', 21, 'Road cycling: A test of endurance, tactics, and speed as cyclists navigate diverse terrains, strategizing to outpace rivals and cross the finish line first.', '', 'scheduled', 'tv_channel', NULL),
+(24, 'Time Trial Route', 10, 'Masc', '2024-07-27', '2024-07-27', 4, 'Individual time trial: Cyclists race against the clock, showcasing stamina, strategy, and speed as they tackle the course solo, aiming for the fastest time to secure victory.', '', 'scheduled', 'tv_channel', NULL);
 
 -- --------------------------------------------------------
 
@@ -213,6 +258,61 @@ INSERT INTO `sport` (`id`, `name`, `description`, `picture`, `history`) VALUES
 (10, 'Cycling', 'Cycling, also called biking or bicycling, is the use of bicycles for transport, recreation, exercise or sport. People engaged in cycling are referred to as \"cyclists\", \"bikers\", or less commonly, as \"bicyclists\". Apart from two-wheeled bicycles, \"cycling\"', '', 'Bicycles were introduced in the 19th century and now number about one billion worldwide. They are the principal means of transportation in many parts of the world.'),
 (11, 'Rugby', 'Is a robust team sport played with an oval ball. Two teams of 15 players each aim to score points by carrying, passing, or kicking the ball towards the opponent\'s goal line. It demands strategy, strength, and skillful ball-handling. Rugby promotes camaraderie, sportsmanship, and respect, enjoying global popularity.', NULL, 'In 1871, English clubs met to form the Rugby Football Union (RFU). In 1892, after charges of professionalism (compensation of team members) were made against some clubs for paying players for missing work'),
 (12, 'Field Hockey', 'Is a team sport structured in standard hockey format, in which each team plays with 11 players in total, made up of 10 field players and a goalkeeper. Teams must move a hockey ball around a pitch by hitting it with a hockey stick towards the rival team\'s shooting circle and then into the goal', NULL, 'There are historical records which suggest early forms of hockey were played in Egypt and Persia c. 2000 BC, and in Ethiopia c. 1000 BC.');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `team`
+--
+
+DROP TABLE IF EXISTS `team`;
+CREATE TABLE IF NOT EXISTS `team` (
+  `id` tinyint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `country` varchar(20) NOT NULL,
+  `modality` tinyint NOT NULL,
+  `category` enum('Masc','Fem','Mixed') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `team_ibfk_1` (`country`),
+  KEY `team_ibfk_2` (`modality`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `team`
+--
+
+INSERT INTO `team` (`id`, `country`, `modality`, `category`) VALUES
+(1, 'United States of Ame', 7, 'Masc'),
+(2, 'United States of Ame', 8, 'Fem'),
+(3, 'France', 7, 'Masc'),
+(4, 'Spain', 7, 'Masc'),
+(5, 'Slovenia', 7, 'Masc'),
+(6, 'Spain', 8, 'Fem'),
+(7, 'France', 8, 'Fem'),
+(8, 'Canada', 8, 'Fem'),
+(9, 'Spain', 9, 'Masc'),
+(10, 'France', 9, 'Masc'),
+(11, 'Germany', 9, 'Masc'),
+(12, 'Sweden', 9, 'Masc'),
+(13, 'Spain', 10, 'Fem'),
+(14, 'Norway', 10, 'Fem'),
+(15, 'Denmark', 10, 'Fem'),
+(16, 'Netherlands', 10, 'Fem'),
+(17, 'Spain', 17, 'Masc'),
+(18, 'Brazil', 17, 'Masc'),
+(19, 'France', 17, 'Masc'),
+(20, 'England', 17, 'Masc'),
+(21, 'Spain', 18, 'Fem'),
+(22, 'France', 18, 'Fem'),
+(23, 'England', 18, 'Fem'),
+(24, 'United States of Ame', 18, 'Fem'),
+(25, 'Serbia', 21, 'Masc'),
+(26, 'Italy', 21, 'Masc'),
+(28, 'Croatia', 21, 'Masc'),
+(29, 'Spain', 21, 'Masc'),
+(30, 'United States of Ame', 22, 'Fem'),
+(31, 'Spain', 22, 'Fem'),
+(32, 'Italy', 22, 'Fem'),
+(33, 'Hungary', 22, 'Fem');
 
 -- --------------------------------------------------------
 
@@ -297,6 +397,13 @@ ALTER TABLE `result`
   ADD CONSTRAINT `result_ibfk_1` FOREIGN KEY (`modality_id`) REFERENCES `modality` (`id`),
   ADD CONSTRAINT `result_ibfk_2` FOREIGN KEY (`athlete_id`) REFERENCES `athlete` (`id`),
   ADD CONSTRAINT `result_ibfk_3` FOREIGN KEY (`country`) REFERENCES `country` (`country`);
+
+--
+-- Filtros para la tabla `team`
+--
+ALTER TABLE `team`
+  ADD CONSTRAINT `team_ibfk_1` FOREIGN KEY (`country`) REFERENCES `country` (`country`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `team_ibfk_2` FOREIGN KEY (`modality`) REFERENCES `modality` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
 -- Filtros para la tabla `venue`
