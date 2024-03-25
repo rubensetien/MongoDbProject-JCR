@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 24-03-2024 a las 21:57:01
+-- Tiempo de generación: 25-03-2024 a las 10:04:04
 -- Versión del servidor: 8.0.35
 -- Versión de PHP: 8.0.26
 
@@ -211,22 +211,46 @@ CREATE TABLE IF NOT EXISTS `venue` (
   `picture` blob,
   PRIMARY KEY (`id`),
   KEY `sport` (`sport`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `venue`
 --
 
 INSERT INTO `venue` (`id`, `name`, `location`, `capacity`, `status`, `sport`, `picture`) VALUES
-(1, 'Hôtel de Ville', 'Paris', 'N/A', 'temporary', 1, NULL),
-(2, 'Trocadéro (Pont d\'Iéna) ', 'Paris', '13.000 ', 'temporary', 1, NULL),
+(1, 'Hôtel de Ville', 'Paris Centre zone', 'N/A', 'temporary', 1, NULL),
+(2, 'Trocadéro (Pont d\'Iéna) ', 'Paris Centre zone', '13.000 ', 'temporary', 1, NULL),
 (3, 'Stade de France', 'Grand Paris zone', '77.083', 'existing building', 1, NULL),
 (4, 'Pont Alexandre III', 'Paris Centre zone', '1.000', 'temporary', 2, NULL),
 (5, 'Paris La Défense Arena', 'Grand Paris zone', '15.220', 'existing building', 2, NULL),
 (6, 'Stade de France', 'Grand Paris zone', '77.083', 'existing building', 11, NULL),
 (7, 'Paris La Défense Arena', 'Grand Paris zone', '15.220', 'existing building', 9, NULL),
 (8, 'Porte de La Chapelle Arena', 'Grand Paris zone', '8.000', 'existing building', 5, NULL),
-(9, 'Paris Aquatic Centre', 'Grand Paris zone', '5.000', 'existing building', 9, NULL);
+(9, 'Paris Aquatic Centre', 'Grand Paris zone', '5.000', 'existing building', 9, NULL),
+(10, 'Parc des Princes', 'Paris Centre zone', '48.583', 'existing building', 7, NULL),
+(11, 'Roland Garros Stadium', 'Paris Centre zone', '34.000', 'existing building', 6, NULL),
+(12, 'Philippe Chatrier Court', 'Paris Centre zone', '15.000', 'existing building', 6, NULL),
+(13, 'Court Suzanne Lenglen', 'Paris Centre zone', '10.000', 'existing building', 6, NULL),
+(14, 'Court Simonne Mathieu ', 'Paris Centre zone', '9.000', 'existing building', 6, NULL),
+(15, 'South Paris Arena', 'Paris Centre zone', '6.000', 'temporary', 4, NULL),
+(16, 'Bercy Arena', 'Paris Centre zone', '15.000', 'existing building', 5, NULL),
+(17, 'Bercy Arena', 'Paris Centre zone', '15.000', 'existing building', 3, NULL),
+(18, 'Grand Palais', 'Paris Centre zone', '8.000', 'existing building', 8, NULL),
+(19, 'Place de la Concorde', 'Paris Centre zone', '30.000', 'existing building', 3, NULL),
+(20, 'Pont Alexandre III', 'Paris Centre zone', '1.000', 'temporary', 10, NULL),
+(21, 'Trocadéro (Pont d\'Iéna) ', 'Paris Centre zone', '13.000', 'temporary', 10, NULL),
+(22, 'Les Invalides', 'Paris Centre zone', '8.000', 'temporary', 10, NULL),
+(23, 'Gardens of the Palace of Versailles', 'Versailles zone', '80.000', 'temporary', 1, NULL),
+(24, 'Élancourt Hill', 'Versailles zone', '25.000', 'existing building', 10, NULL),
+(25, 'Vélodrome de Saint-Quentin-en-Yvelines', 'Versailles zone', '5.000', 'existing building', 10, NULL),
+(26, 'Pierre Mauroy Stadium', 'Outlying venues', '26.000', 'existing building', 3, NULL),
+(27, 'Pierre Mauroy Stadium', 'Outlying venues', '26.000', 'existing building', 4, NULL),
+(28, 'Stade Vélodrome', 'Outlying venues', '67.394', 'existing building', 7, NULL),
+(29, 'Parc Olympique Lyonnais', 'Outlying venues', '59.186', 'existing building', 7, NULL),
+(30, 'Stade Matmut Atlantique', 'Outlying venues', '42.115', 'existing building', 7, NULL),
+(31, 'Stade Geoffroy-Guichard', 'Outlying venues', '41.965', 'existing building', 7, NULL),
+(32, 'Allianz Riviera', 'Outlying venues', '35.624', 'existing building', 7, NULL),
+(33, 'Stade de la Beaujoire', 'Outlying venues', '35.322', 'existing building', 7, NULL);
 
 --
 -- Restricciones para tablas volcadas
