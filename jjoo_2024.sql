@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 25-03-2024 a las 18:03:24
+-- Tiempo de generación: 25-03-2024 a las 18:54:45
 -- Versión del servidor: 8.3.0
 -- Versión de PHP: 8.2.13
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `athlete` (
   PRIMARY KEY (`id`),
   KEY `country` (`country`),
   KEY `sport` (`modality`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `athlete`
@@ -55,7 +55,7 @@ INSERT INTO `athlete` (`id`, `name`, `country`, `age`, `gender`, `modality`, `me
 (5, 'Juan Miguel Echevarría', 'Cuba', 25, 'Male', 2, 0, '1 gold, 1 silver, 1 bronze', NULL),
 (6, 'Miltiadis Tentoglou', 'Greece', 26, 'Male', 2, 0, '10 golds, 1 silver', NULL),
 (7, 'Thobias Montler', 'Sweden', 28, 'Male', 2, 0, '5 silvers', NULL),
-(8, 'Jeff Henderson', 'United States', 35, 'Male', 2, 0, '1 gold, 1 silver', NULL),
+(8, 'Jeff Henderson', 'United States of Ame', 35, 'Male', 2, 0, '1 gold, 1 silver', NULL),
 (9, 'Sarah Sjöström', 'Sweden', 30, 'Female', 4, 0, '16 golds, 6 silvers, 5 bronzes', NULL),
 (10, 'Cate Campbell', 'Australia', 31, 'Female', 4, 0, '17 golds, 6 silvers, 6 bronzes', NULL),
 (11, 'Emma McKeon', 'Australia', 29, 'Female', 4, 0, '18 golds, 13 silvers, 10 bronzes', NULL),
@@ -65,9 +65,9 @@ INSERT INTO `athlete` (`id`, `name`, `country`, `age`, `gender`, `modality`, `me
 (15, 'Ibrahim Çolak', 'Türkiye', 29, 'Male', 11, 0, '1 gold', NULL),
 (16, 'Arthur Zaneti', 'Brazil', 33, 'Male', 11, 0, '5 golds, 4 silvers', NULL),
 (17, 'Eleftherios Petrounias', 'Greece', 33, 'Male', 11, 0, '11 golds, 1 silver, 3 bronzes', NULL),
-(18, 'Simon Billes', 'United States', 27, 'Female', 12, 0, '27 golds, 5 silvers, 5 bronzes', NULL),
+(18, 'Simon Billes', 'United States of Ame', 27, 'Female', 12, 0, '27 golds, 5 silvers, 5 bronzes', NULL),
 (19, 'Rebeca Andrade', 'Brazil', 24, 'Female', 12, 0, '4 golds, 6 silvers, 2 bronzes', NULL),
-(20, 'Jade Carey', 'United States', 23, 'Female', 12, 0, '4 golds, 3 silvers, 1 bronze', NULL),
+(20, 'Jade Carey', 'United States of Ame', 23, 'Female', 12, 0, '4 golds, 3 silvers, 1 bronze', NULL),
 (21, 'Yeo Seo-jeong', 'South Korea', 22, 'Female', 12, 0, '2 bronzes', NULL),
 (22, 'Novak Djokovic\r\n', 'Serbia', 36, 'Male', 15, 0, '24 Grand Slam, 12 runner-up Grand Slam, 1 Olympic bronze\r\n', NULL),
 (23, 'Stefanos Tsitsipas\r\n', 'Greece', 25, 'Male', 15, 0, ' 2 runner-up Grand Slam\r\n', NULL),
@@ -78,8 +78,20 @@ INSERT INTO `athlete` (`id`, `name`, `country`, `age`, `gender`, `modality`, `me
 (28, 'Iga Swiatek', 'Poland', 22, 'Female', 16, 0, '4 Grand Slams, 1 runner-up Grand Slam', NULL),
 (30, 'Lutalo Muhammad', 'United Kingdom', 32, 'Male', 19, 0, '1 gold, 1 silver, 3 bronzes', NULL),
 (31, 'Cha Dong-min', 'South Korea', 37, 'Male', 19, 0, '2 golds, 1 silver, 1 bronze', NULL),
-(32, 'Servet Tazwgül', 'Türkiye', 35, 'Male', 20, 0, '8 gold, 2 bronzes', NULL),
-(33, 'Joel González', 'Spain', 34, 'Male', 20, 0, '5 golds, 1 silver, 3 bronzes', NULL);
+(32, 'Servet Tazwgül', 'Türkiye', 35, 'Male', 19, 0, '8 gold, 2 bronzes', NULL),
+(33, 'Joel González', 'Spain', 34, 'Male', 19, 0, '5 golds, 1 silver, 3 bronzes', NULL),
+(35, 'Jade Jones', 'Great Britain', 31, 'Female', 20, 0, '8 golds, 2 silvers, 5 bronzes', NULL),
+(36, 'Wu Jingyu', 'China', 37, 'Female', 20, 0, '8 golds, 4 silvers, 2 bronzes', NULL),
+(37, 'Bianca Walkden', 'Great Britain', 32, 'Female', 20, 0, '7 golds, 1 silver, 4 bronzes', NULL),
+(38, 'Kim So-hui', 'South Korea', 30, 'Female', 20, 0, '4 golds, 1 bronze', NULL),
+(39, 'Mikel Landa', 'Spain', 34, 'Male', 23, 0, ' ', NULL),
+(40, 'Santiago Buitrago', 'Colombia', 24, 'Male', 23, 0, ' ', NULL),
+(41, 'Richard Carapaz', 'Ecuador', 30, 'Male', 23, 0, '1 Tour of Italy, 1 Tour of Switzerland, 1 gold JJ.OO, 1 Ecuador in Road Race ', NULL),
+(42, 'Thomas Pidcock', 'Great Britain', 24, 'Male', 23, 0, '1 Strade Bianche, 1 Flecha Brabanzona', NULL),
+(43, 'Primoz Roglic', 'Slovenia', 34, 'Male', 24, 0, '1 gold JJ.OO, 1 Paris-Niza, 3 Tour of Spain, 1 Tour of Italy', NULL),
+(44, 'Remco Evenepoel', 'Belgium', 24, 'Male', 24, 0, '1 Tour of Spain, 1 Tour of Poland, 1 Belgium Time Trial', NULL),
+(45, 'Filippo Ganna', 'Italy', 27, 'Male', 24, 0, '4 Italy time trial, 2 World Time Trial Championship, 1 gold JJ.OO', NULL),
+(46, 'Joshua Tarling', 'Great Britain', 20, 'Male', 24, 0, '4 European Time Trial Championship, 1 United Kingdom ITT', NULL);
 
 -- --------------------------------------------------------
 
@@ -131,7 +143,6 @@ INSERT INTO `country` (`country`, `acronym`, `flag`, `capital`, `population`, `r
 ('Sweden', 'SWE', NULL, 'Stockholm', '10.400.000', 'Still to be determined'),
 ('Türkiye', 'TUR', NULL, 'Ankara', '82.000.000', 'still to be determined'),
 ('United Kingdom', 'GBR', NULL, 'London', '77.300.000', 'still to be determined'),
-('United States', 'USA', NULL, 'Washington DC', '331 900 000', 'still to be determined'),
 ('United States of Ame', 'USA', NULL, 'Washington D.C.', '331.000.000', 'still to be determined');
 
 -- --------------------------------------------------------
@@ -164,8 +175,8 @@ CREATE TABLE IF NOT EXISTS `modality` (
 --
 
 INSERT INTO `modality` (`id`, `name`, `sport_id`, `category`, `start_date`, `end_date`, `venue_id`, `description`, `result`, `status`, `transmission`, `picture`) VALUES
-(1, '100 Metros', 1, 'Masc', '2024-08-03', '2024-08-04', 1, 'Carrera en la que se tienen que recorrer 100 metros en un suelo nivelado, libres de todo obstáculo, con la mayor rapidez posible', '', 'scheduled', 'tv_channel', NULL),
-(2, 'Long jump', 1, 'Masc', '2024-08-02', '2024-08-06', 3, '', '', 'scheduled', 'tv_channel', NULL),
+(1, '100 Meters', 1, 'Masc', '2024-08-03', '2024-08-04', 1, 'Race in which one must cover 100 meters on a level surface, free from any obstacles, as quickly as possible.', '', 'scheduled', 'tv_channel', NULL),
+(2, 'Long jump', 1, 'Masc', '2024-08-02', '2024-08-06', 3, 'The long jump is a track and field event where athletes sprint and then jump as far as they can from a designated point', '', 'scheduled', 'tv_channel', NULL),
 (3, ' 4 x 100 meters relay', 1, 'Masc', '2024-08-08', '2024-08-10', 3, 'The test consists of a race in which four runners take part, in which each one of them completes a distance of 100 meters.', '', 'scheduled', 'tv_channel', NULL),
 (4, '100 metre freestyle', 2, 'Fem', '2024-07-30', '2024-07-31', 5, 'The 100m freestyle swimming event is a fast-paced race where swimmers employ any technique to complete the distance in the shortest time possible, focusing on speed and efficiency of stroke, kick, and breathing.', '', 'scheduled', 'tv_channel', NULL),
 (5, 'Open water', 2, 'Masc', '2024-08-09', '2024-08-09', 4, 'The men\'s open water swimming event is a challenging race covering varying distances in natural bodies of water, testing endurance and navigation skills', '', 'scheduled', 'tv_channel', NULL),
@@ -185,7 +196,7 @@ INSERT INTO `modality` (`id`, `name`, `sport_id`, `category`, `start_date`, `end
 (21, 'Waterpolo', 9, 'Masc', '2024-07-28', '2024-08-11', 5, 'Men\'s water polo: A thrilling display of athleticism, teamwork, and strategy as players battle in the pool, aiming to outmaneuver opponents and score goals to claim victory.', '', 'scheduled', 'tv_channel', NULL),
 (22, 'Waterpolo', 9, 'Fem', '2024-07-27', '2024-08-10', 7, 'Women\'s water polo: An intense showcase of skill, teamwork, and endurance as athletes compete in the pool, utilizing strategy and precision to outplay opponents and secure goals for victory.', '', 'scheduled', 'tv_channel', NULL),
 (23, 'Single route', 10, 'Masc', '2024-08-03', '2024-08-03', 21, 'Road cycling: A test of endurance, tactics, and speed as cyclists navigate diverse terrains, strategizing to outpace rivals and cross the finish line first.', '', 'scheduled', 'tv_channel', NULL),
-(24, 'time trial route', 10, 'Masc', '2024-07-27', '2024-07-27', 4, 'Individual time trial: Cyclists race against the clock, showcasing stamina, strategy, and speed as they tackle the course solo, aiming for the fastest time to secure victory.', '', 'scheduled', 'tv_channel', NULL);
+(24, 'Time Trial Route', 10, 'Masc', '2024-07-27', '2024-07-27', 4, 'Individual time trial: Cyclists race against the clock, showcasing stamina, strategy, and speed as they tackle the course solo, aiming for the fastest time to secure victory.', '', 'scheduled', 'tv_channel', NULL);
 
 -- --------------------------------------------------------
 
