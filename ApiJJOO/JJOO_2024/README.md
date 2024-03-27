@@ -14,7 +14,7 @@ Para iniciar la API, sigue estos pasos:
    npm install
 3. Una vez que se completen las instalaciones de las dependencias, puedes iniciar la API ejecutando el siguiente comando:
    ```bash
-   npm start
+   nodemon start
 Esto iniciará el servidor y podrás acceder a la API desde tu navegador o desde otras aplicaciones.
 ## Errores Comunes y Cómo Manejarlos
 ### 1. Error de "nodemon no se reconoce..."
