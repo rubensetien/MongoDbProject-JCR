@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 27-03-2024 a las 16:50:31
+-- Tiempo de generación: 30-03-2024 a las 11:10:43
 -- Versión del servidor: 8.0.35
 -- Versión de PHP: 8.0.26
 
@@ -35,13 +35,13 @@ CREATE TABLE IF NOT EXISTS `athlete` (
   `team` tinyint UNSIGNED DEFAULT NULL,
   `age` tinyint NOT NULL,
   `gender` enum('Male','Female') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `modality` tinyint NOT NULL,
+  `modality` varchar(50) NOT NULL,
   `medals` tinyint NOT NULL DEFAULT '0',
   `record` varchar(255) NOT NULL,
   `picture` blob,
   PRIMARY KEY (`id`),
   KEY `country` (`country`),
-  KEY `sport` (`modality`)
+  KEY `athlete_ibfk_2` (`modality`)
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -49,50 +49,50 @@ CREATE TABLE IF NOT EXISTS `athlete` (
 --
 
 INSERT INTO `athlete` (`id`, `name`, `country`, `team`, `age`, `gender`, `modality`, `medals`, `record`, `picture`) VALUES
-(1, 'Trayvon Bromell', 'United States of Ame', NULL, 28, 'Male', 1, 0, '1 gold, 2 bronzes', NULL),
-(2, 'Akani Simbine', 'South Africa', NULL, 30, 'Male', 1, 0, '1 gold', NULL),
-(3, 'Ronnie Baker', 'United States of Ame', NULL, 30, 'Male', 1, 0, '1 bronze', NULL),
-(4, 'Andre De Grasse', 'Canada', NULL, 29, 'Male', 1, 0, '2 golds, 3 silvers, 6 bronzes', NULL),
-(5, 'Juan Miguel Echevarría', 'Cuba', NULL, 25, 'Male', 2, 0, '1 gold, 1 silver, 1 bronze', NULL),
-(6, 'Miltiadis Tentoglou', 'Greece', NULL, 26, 'Male', 2, 0, '10 golds, 1 silver', NULL),
-(7, 'Thobias Montler', 'Sweden', NULL, 28, 'Male', 2, 0, '5 silvers', NULL),
-(8, 'Jeff Henderson', 'United States of Ame', NULL, 35, 'Male', 2, 0, '1 gold, 1 silver', NULL),
-(9, 'Sarah Sjöström', 'Sweden', NULL, 30, 'Female', 4, 0, '16 golds, 6 silvers, 5 bronzes', NULL),
-(10, 'Cate Campbell', 'Australia', NULL, 31, 'Female', 4, 0, '17 golds, 6 silvers, 6 bronzes', NULL),
-(11, 'Emma McKeon', 'Australia', NULL, 29, 'Female', 4, 0, '18 golds, 13 silvers, 10 bronzes', NULL),
-(12, 'Penny Oleksiak', 'Canada', NULL, 23, 'Female', 4, 0, '3 golds, 5 silvers, 12 bronzes', NULL),
-(13, 'Federica Pellegrini', 'Italy', NULL, 35, 'Female', 4, 0, '28 golds, 28 silvers, 19 bronzes', NULL),
-(14, 'Liu Yang', 'China', NULL, 29, 'Male', 11, 0, '4 golds, 1 silver, 4 bronzes', NULL),
-(15, 'Ibrahim Çolak', 'Türkiye', NULL, 29, 'Male', 11, 0, '1 gold', NULL),
-(16, 'Arthur Zaneti', 'Brazil', NULL, 33, 'Male', 11, 0, '5 golds, 4 silvers', NULL),
-(17, 'Eleftherios Petrounias', 'Greece', NULL, 33, 'Male', 11, 0, '11 golds, 1 silver, 3 bronzes', NULL),
-(18, 'Simon Billes', 'United States of Ame', NULL, 27, 'Female', 12, 0, '27 golds, 5 silvers, 5 bronzes', NULL),
-(19, 'Rebeca Andrade', 'Brazil', NULL, 24, 'Female', 12, 0, '4 golds, 6 silvers, 2 bronzes', NULL),
-(20, 'Jade Carey', 'United States of Ame', NULL, 23, 'Female', 12, 0, '4 golds, 3 silvers, 1 bronze', NULL),
-(21, 'Yeo Seo-jeong', 'South Korea', NULL, 22, 'Female', 12, 0, '2 bronzes', NULL),
-(22, 'Novak Djokovic\r\n', 'Serbia', NULL, 36, 'Male', 15, 0, '24 Grand Slam, 12 runner-up Grand Slam, 1 Olympic bronze\r\n', NULL),
-(23, 'Stefanos Tsitsipas\r\n', 'Greece', NULL, 25, 'Male', 15, 0, ' 2 runner-up Grand Slam\r\n', NULL),
-(24, 'Carlos Alcaraz\r\n', 'Spain', NULL, 20, 'Male', 15, 0, ' 2 Grand Slam\r\n', NULL),
-(25, 'Alexander Zverev\r\n', 'Germany', NULL, 26, 'Male', 15, 0, ' 1 runner-up Grand Slam, 1 gold at the Olympics\r\n', NULL),
-(26, 'Naomi Osaka', 'Japan', NULL, 26, 'Female', 16, 0, '4 Grand Slams', NULL),
-(27, 'Aryna Sabalenka', 'Belarus', NULL, 25, 'Female', 16, 0, '4 Grand Slams, 1 runner-up Grand Slam', NULL),
-(28, 'Iga Swiatek', 'Poland', NULL, 22, 'Female', 16, 0, '4 Grand Slams, 1 runner-up Grand Slam', NULL),
-(30, 'Lutalo Muhammad', 'United Kingdom', NULL, 32, 'Male', 19, 0, '1 gold, 1 silver, 3 bronzes', NULL),
-(31, 'Cha Dong-min', 'South Korea', NULL, 37, 'Male', 19, 0, '2 golds, 1 silver, 1 bronze', NULL),
-(32, 'Servet Tazwgül', 'Türkiye', NULL, 35, 'Male', 19, 0, '8 gold, 2 bronzes', NULL),
-(33, 'Joel González', 'Spain', NULL, 34, 'Male', 19, 0, '5 golds, 1 silver, 3 bronzes', NULL),
-(35, 'Jade Jones', 'Great Britain', NULL, 31, 'Female', 20, 0, '8 golds, 2 silvers, 5 bronzes', NULL),
-(36, 'Wu Jingyu', 'China', NULL, 37, 'Female', 20, 0, '8 golds, 4 silvers, 2 bronzes', NULL),
-(37, 'Bianca Walkden', 'Great Britain', NULL, 32, 'Female', 20, 0, '7 golds, 1 silver, 4 bronzes', NULL),
-(38, 'Kim So-hui', 'South Korea', NULL, 30, 'Female', 20, 0, '4 golds, 1 bronze', NULL),
-(39, 'Mikel Landa', 'Spain', NULL, 34, 'Male', 23, 0, ' ', NULL),
-(40, 'Santiago Buitrago', 'Colombia', NULL, 24, 'Male', 23, 0, ' ', NULL),
-(41, 'Richard Carapaz', 'Ecuador', NULL, 30, 'Male', 23, 0, '1 Tour of Italy, 1 Tour of Switzerland, 1 gold JJ.OO, 1 Ecuador in Road Race ', NULL),
-(42, 'Thomas Pidcock', 'Great Britain', NULL, 24, 'Male', 23, 0, '1 Strade Bianche, 1 Flecha Brabanzona', NULL),
-(43, 'Primoz Roglic', 'Slovenia', NULL, 34, 'Male', 24, 0, '1 gold JJ.OO, 1 Paris-Niza, 3 Tour of Spain, 1 Tour of Italy', NULL),
-(44, 'Remco Evenepoel', 'Belgium', NULL, 24, 'Male', 24, 0, '1 Tour of Spain, 1 Tour of Poland, 1 Belgium Time Trial', NULL),
-(45, 'Filippo Ganna', 'Italy', NULL, 27, 'Male', 24, 0, '4 Italy time trial, 2 World Time Trial Championship, 1 gold JJ.OO', NULL),
-(46, 'Joshua Tarling', 'Great Britain', NULL, 20, 'Male', 24, 0, '4 European Time Trial Championship, 1 United Kingdom ITT', NULL);
+(1, 'Trayvon Bromell', 'United States of Ame', NULL, 28, 'Male', '100 Meters', 0, '1 gold, 2 bronzes', NULL),
+(2, 'Akani Simbine', 'South Africa', NULL, 30, 'Male', '100 Meters', 0, '1 gold', NULL),
+(3, 'Ronnie Baker', 'United States of Ame', NULL, 30, 'Male', '100 Meters', 0, '1 bronze', NULL),
+(4, 'Andre De Grasse', 'Canada', NULL, 29, 'Male', '100 Meters', 0, '2 golds, 3 silvers, 6 bronzes', NULL),
+(5, 'Juan Miguel Echevarría', 'Cuba', NULL, 25, 'Male', 'Long jump', 0, '1 gold, 1 silver, 1 bronze', NULL),
+(6, 'Miltiadis Tentoglou', 'Greece', NULL, 26, 'Male', 'Long jump', 0, '10 golds, 1 silver', NULL),
+(7, 'Thobias Montler', 'Sweden', NULL, 28, 'Male', 'Long jump', 0, '5 silvers', NULL),
+(8, 'Jeff Henderson', 'United States of Ame', NULL, 35, 'Male', 'Long jump', 0, '1 gold, 1 silver', NULL),
+(9, 'Sarah Sjöström', 'Sweden', NULL, 30, 'Female', '100 metre freestyle', 0, '16 golds, 6 silvers, 5 bronzes', NULL),
+(10, 'Cate Campbell', 'Australia', NULL, 31, 'Female', '100 metre freestyle', 0, '17 golds, 6 silvers, 6 bronzes', NULL),
+(11, 'Emma McKeon', 'Australia', NULL, 29, 'Female', '100 metre freestyle', 0, '18 golds, 13 silvers, 10 bronzes', NULL),
+(12, 'Penny Oleksiak', 'Canada', NULL, 23, 'Female', '100 metre freestyle', 0, '3 golds, 5 silvers, 12 bronzes', NULL),
+(13, 'Federica Pellegrini', 'Italy', NULL, 35, 'Female', '100 metre freestyle', 0, '28 golds, 28 silvers, 19 bronzes', NULL),
+(14, 'Liu Yang', 'China', NULL, 29, 'Male', 'Rings', 0, '4 golds, 1 silver, 4 bronzes', NULL),
+(15, 'Ibrahim Çolak', 'Türkiye', NULL, 29, 'Male', 'Rings', 0, '1 gold', NULL),
+(16, 'Arthur Zaneti', 'Brazil', NULL, 33, 'Male', 'Rings', 0, '5 golds, 4 silvers', NULL),
+(17, 'Eleftherios Petrounias', 'Greece', NULL, 33, 'Male', 'Rings', 0, '11 golds, 1 silver, 3 bronzes', NULL),
+(18, 'Simon Billes', 'United States of Ame', NULL, 27, 'Female', 'Vault', 0, '27 golds, 5 silvers, 5 bronzes', NULL),
+(19, 'Rebeca Andrade', 'Brazil', NULL, 24, 'Female', 'Vault', 0, '4 golds, 6 silvers, 2 bronzes', NULL),
+(20, 'Jade Carey', 'United States of Ame', NULL, 23, 'Female', 'Vault', 0, '4 golds, 3 silvers, 1 bronze', NULL),
+(21, 'Yeo Seo-jeong', 'South Korea', NULL, 22, 'Female', 'Vault', 0, '2 bronzes', NULL),
+(22, 'Novak Djokovic\r\n', 'Serbia', NULL, 36, 'Male', 'Single tenis', 0, '24 Grand Slam, 12 runner-up Grand Slam, 1 Olympic bronze\r\n', NULL),
+(23, 'Stefanos Tsitsipas\r\n', 'Greece', NULL, 25, 'Male', 'Single tenis', 0, ' 2 runner-up Grand Slam\r\n', NULL),
+(24, 'Carlos Alcaraz\r\n', 'Spain', NULL, 20, 'Male', 'Single tenis', 0, ' 2 Grand Slam\r\n', NULL),
+(25, 'Alexander Zverev\r\n', 'Germany', NULL, 26, 'Male', 'Single tenis', 0, ' 1 runner-up Grand Slam, 1 gold at the Olympics\r\n', NULL),
+(26, 'Naomi Osaka', 'Japan', NULL, 26, 'Female', 'Single tenis', 0, '4 Grand Slams', NULL),
+(27, 'Aryna Sabalenka', 'Belarus', NULL, 25, 'Female', 'Single tenis', 0, '4 Grand Slams, 1 runner-up Grand Slam', NULL),
+(28, 'Iga Swiatek', 'Poland', NULL, 22, 'Female', 'Single tenis', 0, '4 Grand Slams, 1 runner-up Grand Slam', NULL),
+(30, 'Lutalo Muhammad', 'United Kingdom', NULL, 32, 'Male', 'Single fight +80', 0, '1 gold, 1 silver, 3 bronzes', NULL),
+(31, 'Cha Dong-min', 'South Korea', NULL, 37, 'Male', 'Single fight +80', 0, '2 golds, 1 silver, 1 bronze', NULL),
+(32, 'Servet Tazwgül', 'Türkiye', NULL, 35, 'Male', 'Single fight +80', 0, '8 gold, 2 bronzes', NULL),
+(33, 'Joel González', 'Spain', NULL, 34, 'Male', 'Single fight +80', 0, '5 golds, 1 silver, 3 bronzes', NULL),
+(35, 'Jade Jones', 'Great Britain', NULL, 31, 'Female', 'Single fight -69', 0, '8 golds, 2 silvers, 5 bronzes', NULL),
+(36, 'Wu Jingyu', 'China', NULL, 37, 'Female', 'Single fight -69', 0, '8 golds, 4 silvers, 2 bronzes', NULL),
+(37, 'Bianca Walkden', 'Great Britain', NULL, 32, 'Female', 'Single fight -69', 0, '7 golds, 1 silver, 4 bronzes', NULL),
+(38, 'Kim So-hui', 'South Korea', NULL, 30, 'Female', 'Single fight -69', 0, '4 golds, 1 bronze', NULL),
+(39, 'Mikel Landa', 'Spain', NULL, 34, 'Male', 'Single route', 0, ' ', NULL),
+(40, 'Santiago Buitrago', 'Colombia', NULL, 24, 'Male', 'Single route', 0, ' ', NULL),
+(41, 'Richard Carapaz', 'Ecuador', NULL, 30, 'Male', 'Single route', 0, '1 Tour of Italy, 1 Tour of Switzerland, 1 gold JJ.OO, 1 Ecuador in Road Race ', NULL),
+(42, 'Thomas Pidcock', 'Great Britain', NULL, 24, 'Male', 'Single route', 0, '1 Strade Bianche, 1 Flecha Brabanzona', NULL),
+(43, 'Primoz Roglic', 'Slovenia', NULL, 34, 'Male', 'Time Trial Route', 0, '1 gold JJ.OO, 1 Paris-Niza, 3 Tour of Spain, 1 Tour of Italy', NULL),
+(44, 'Remco Evenepoel', 'Belgium', NULL, 24, 'Male', 'Time Trial Route', 0, '1 Tour of Spain, 1 Tour of Poland, 1 Belgium Time Trial', NULL),
+(45, 'Filippo Ganna', 'Italy', NULL, 27, 'Male', 'Time Trial Route', 0, '4 Italy time trial, 2 World Time Trial Championship, 1 gold JJ.OO', NULL),
+(46, 'Joshua Tarling', 'Great Britain', NULL, 20, 'Male', 'Time Trial Route', 0, '4 European Time Trial Championship, 1 United Kingdom ITT', NULL);
 
 -- --------------------------------------------------------
 
@@ -178,7 +178,6 @@ CREATE TABLE IF NOT EXISTS `modality` (
 --
 
 INSERT INTO `modality` (`name`, `category`, `sport`, `start_date`, `end_date`, `venue`, `description`, `result`, `status`, `transmission`, `picture`) VALUES
-(' Vault ', 'Male', 'Gymnastics', '2024-07-27', '2024-08-04', 'Bercy Arena', 'The men\'s vault event in artistic gymnastics showcases explosive power, agility, and precision as gymnasts execute dynamic maneuvers, including flips and twists, with impeccable technique and control.', '', 'scheduled', 'platform', NULL),
 ('100 Meters', 'Male', 'Athletics', '2024-08-03', '2024-08-04', 'Hôtel de Ville', 'Race in which one must cover 100 meters on a level surface, free from any obstacles, as quickly as possible.', '', 'scheduled', 'tv_channel', NULL),
 ('100 metre freestyle', 'Female', 'Swimming', '2024-07-30', '2024-07-31', 'Paris La Défense Arena', 'The 100m freestyle swimming event is a fast-paced race where swimmers employ any technique to complete the distance in the shortest time possible, focusing on speed and efficiency of stroke, kick, and breathing.', '', 'scheduled', 'tv_channel', NULL),
 ('4 x 100 meters relay', 'Male', 'Athletics', '2024-08-08', '2024-08-10', 'Stade de France', 'The test consists of a race in which four runners take part, in which each one of them completes a distance of 100 meters.', '', 'scheduled', 'tv_channel', NULL),
@@ -198,6 +197,7 @@ INSERT INTO `modality` (`name`, `category`, `sport`, `start_date`, `end_date`, `
 ('Single tenis', 'Male', 'Tennis', '2024-07-27', '2024-08-04', 'Roland Garros Stadium', 'Men\'s singles tennis: Individual skill, strategy, athleticism in intense matches, showcasing power, precision, mental fortitude.', '', 'scheduled', 'tv_channel', NULL),
 ('Single tenis', 'Female', 'Tennis', '2024-07-27', '2024-08-03', 'Roland Garros Stadium', 'Women\'s singles tennis: A display of finesse, power, and tactical brilliance in high-stakes matches, showcasing athleticism and mental resilience on the court.', '', 'scheduled', 'tv_channel', NULL),
 ('Time Trial Route', 'Male', 'Cycling', '2024-07-27', '2024-07-27', 'Pont Alexandre III', 'Individual time trial: Cyclists race against the clock, showcasing stamina, strategy, and speed as they tackle the course solo, aiming for the fastest time to secure victory.', '', 'scheduled', 'tv_channel', NULL),
+('Vault', 'Male', 'Gymnastics', '2024-07-27', '2024-08-04', 'Bercy Arena', 'The men\'s vault event in artistic gymnastics showcases explosive power, agility, and precision as gymnasts execute dynamic maneuvers, including flips and twists, with impeccable technique and control.', '', 'scheduled', 'platform', NULL),
 ('Waterpolo', 'Male', 'Waterpolo', '2024-07-28', '2024-08-11', 'Paris La Défense Arena', 'Men\'s water polo: A thrilling display of athleticism, teamwork, and strategy as players battle in the pool, aiming to outmaneuver opponents and score goals to claim victory.', '', 'scheduled', 'tv_channel', NULL),
 ('Waterpolo', 'Female', 'Waterpolo', '2024-07-27', '2024-08-10', 'Bercy Arena', 'Women\'s water polo: An intense showcase of skill, teamwork, and endurance as athletes compete in the pool, utilizing strategy and precision to outplay opponents and secure goals for victory.', '', 'scheduled', 'tv_channel', NULL);
 
@@ -377,7 +377,8 @@ INSERT INTO `venue` (`name`, `sport`, `location`, `capacity`, `status`, `picture
 -- Filtros para la tabla `athlete`
 --
 ALTER TABLE `athlete`
-  ADD CONSTRAINT `athlete_ibfk_1` FOREIGN KEY (`country`) REFERENCES `country` (`country`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `athlete_ibfk_1` FOREIGN KEY (`country`) REFERENCES `country` (`country`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `athlete_ibfk_2` FOREIGN KEY (`modality`) REFERENCES `modality` (`name`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
 -- Filtros para la tabla `modality`
