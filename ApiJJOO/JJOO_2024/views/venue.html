@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Venues</title>
+</head>
+<body>
+    <h1>Lista de Venues</h1>
+    <ul>
+        <% venues.forEach(venue => { %>
+            <li>
+                <strong>Nombre:</strong> <%= venue.name %><br>
+                <strong>Deporte:</strong> <%= venue.sport %><br>
+                <strong>Ubicación:</strong> <%= venue.location %><br>
+                <strong>Capacidad:</strong> <%= venue.capacity %><br>
+                <strong>Estado:</strong> <%= venue.status %><br>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
