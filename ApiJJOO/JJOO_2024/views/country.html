@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Países</title>
+</head>
+<body>
+    <h1>Listado de Países</h1>
+    <ul>
+        <% countries.forEach(country => { %>
+            <li><%= country.country %> - <%= country.capital %> - Población: <%= country.population %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>

@@ -1,3 +1,5 @@
+const Country = require('../models/Country');
+
 exports.home = (req, res) => {
     res.render('home');
 }
@@ -18,9 +20,15 @@ exports.venues = (req, res) => {
     res.send('Venues Page');
 }
 
-exports.country = (req, res) => {
-    res.send('Country Page');
-}
+    exports.getAllCountry = async (req, res) => {
+        try {
+            const countries = await Country.find();
+            res.render('country', { countries });
+        } catch (err) {
+            console.error(err);
+            res.status(500).send('Error al obtener los países');
+        }
+    }
 
 exports.search = (req, res) => {
     res.send('Search Page');
