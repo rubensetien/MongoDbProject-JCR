@@ -9,9 +9,9 @@ module.exports = () => {
 
     router.get('/athletes', olympicController.athletes);
 
-    router.get('/sports', olympicController.sports);
+    router.get('/sports', olympicController.getAllSport);
 
-    router.get('/venues', olympicController.venues);
+    router.get('/venues', olympicController.getAllVenue);
 
     router.get('/country', olympicController.getAllCountry);
 
