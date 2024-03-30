@@ -13,9 +13,11 @@ module.exports = () => {
 
     router.get('/venues', olympicController.venues);
 
-    router.get('/country', olympicController.country);
+    router.get('/country', olympicController.getAllCountry);
 
     router.get('/search', olympicController.search);
+
+
     
     return router;
 }
