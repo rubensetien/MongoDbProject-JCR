@@ -7,7 +7,15 @@ module.exports = () => {
 
     router.get('/about', olympicController.about);
 
+    router.get('/athletes', olympicController.athletes);
+
+    router.get('/sports', olympicController.sports);
+
+    router.get('/venues', olympicController.venues);
+
     router.get('/country', olympicController.country);
+
+    router.get('/search', olympicController.search);
     
     return router;
 }

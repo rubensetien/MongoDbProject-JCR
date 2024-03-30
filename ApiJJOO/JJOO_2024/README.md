@@ -22,6 +22,9 @@ Si encuentras el error "nodemon no se reconoce...", puede deberse a que **nodemo
 
 + Asegúrate de tener **nodemon** instalado ejecutando **npm install -g nodemon**.
 + Si prefieres no instalarlo globalmente, ejecuta **node_modules/.bin/nodemon start** en lugar de **nodemon start**.
+<<<<<<< HEAD
+Con estos pasos, deberías poder iniciar la API y manejar algunos errores comunes que puedan surgir durante el proceso.
+=======
 
 ### 2. Error de ejecución de scripts deshabilitada en PowerShell
 Si te encuentras con el error "No se puede cargar el archivo nodemon.ps1...", es posible que PowerShell esté bloqueando la ejecución de scripts por razones de seguridad. Para solucionarlo:
@@ -29,3 +32,4 @@ Si te encuentras con el error "No se puede cargar el archivo nodemon.ps1...", es
 + Confirma la acción presionando "Sí" o "S".
 
 Con estos pasos, deberías poder iniciar la API y manejar algunos errores comunes que puedan surgir durante el proceso.  
+>>>>>>> 3a45bd5e8913e1c696a23c68162915215fd54333
