@@ -12,9 +12,17 @@ Para iniciar la API, sigue estos pasos:
    
    ```bash
    npm install
-3. Una vez que se completen las instalaciones de las dependencias, puedes iniciar la API ejecutando el siguiente comando:
+
+3. Para importar la base de datos a tu servicio **MongoDB** ejecuta el comando 
    ```bash
-   npm start
+   node importData.js
+
+Si dispones de la interfaz de **MongoDB Compass**, podras observar que se ha importado la base de datos con el nombre de **jjoo_2024_api**. Si eseas comprobar que se ha importado correctamente puedes tomar de referencia que debería haber 44 atletas
+
+4. Una vez que se completen las instalaciones de las dependencias, puedes iniciar la API ejecutando el siguiente comando:
+   ```bash
+   nodemon start
+
 Esto iniciará el servidor y podrás acceder a la API desde tu navegador o desde otras aplicaciones.
 ## Errores Comunes y Cómo Manejarlos
 ### 1. Error de "nodemon no se reconoce..."
