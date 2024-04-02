@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, './views'));
 
 //Conexión con MongoDB
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/jjoo_2024')
+mongoose.connect('mongodb://localhost:27017/jjoo_2024_api')
   .then(() => {})
   .catch(() => {});
 

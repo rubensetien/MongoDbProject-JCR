@@ -1,6 +1,7 @@
 const Country = require('../models/Country');
 const Sport = require('../models/Sport');
 const Venue = require('../models/Venue');
+const Athlete = require('../models/Athlete');
 
 
 exports.home = (req, res) => {
@@ -11,8 +12,14 @@ exports.about = (req, res) => {
     res.send('About Us');   
 }
 
-exports.athletes = (req, res) => {
-    res.send('Athletes Page');
+exports.getAllAthlete = async (req, res) => {
+    try {
+        const athletes = await Athlete.find();
+        res.render('athlete', { athletes });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Failed to retrieve athletes');
+    }
 }
 
 exports.getAllSport = async (req, res) => {
