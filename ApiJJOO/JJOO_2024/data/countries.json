@@ -1,0 +1,258 @@
+[
+  {
+    "country": "Australia",
+    "acronym": "AUS",
+    "flag": null,
+    "capital": "Canberra",
+    "population": "25.650.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Belarus",
+    "acronym": "BLR",
+    "flag": null,
+    "capital": "Minsk",
+    "population": "9.400.000",
+    "representatives": "Still to be determined\r\n"
+  },
+  {
+    "country": "Belgium",
+    "acronym": "BEL",
+    "flag": null,
+    "capital": "Brussels",
+    "population": "11.500.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Brazil",
+    "acronym": "BRA",
+    "flag": null,
+    "capital": "Brasilia",
+    "population": "212.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Canada",
+    "acronym": "CAN",
+    "flag": null,
+    "capital": "Ottawa",
+    "population": "38.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "China",
+    "acronym": "CHN",
+    "flag": null,
+    "capital": "Beijing",
+    "population": "1.400.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Colombia",
+    "acronym": "COL",
+    "flag": null,
+    "capital": "Bogotá",
+    "population": "50.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Croatia",
+    "acronym": "HRV",
+    "flag": null,
+    "capital": "Zagrev",
+    "population": "3 899 000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "Cuba",
+    "acronym": "CUB",
+    "flag": null,
+    "capital": "La Habana",
+    "population": "11.200.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Denmark",
+    "acronym": "DNK",
+    "flag": null,
+    "capital": "Copenhagen",
+    "population": "5.800.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Ecuador",
+    "acronym": "ECU",
+    "flag": null,
+    "capital": "Quito",
+    "population": "17.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "England",
+    "acronym": "ENG",
+    "flag": null,
+    "capital": "London",
+    "population": "55 980 000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "France",
+    "acronym": "FRA",
+    "flag": null,
+    "capital": "Paris",
+    "population": "67.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Germany",
+    "acronym": "DEU",
+    "flag": null,
+    "capital": "Berlin",
+    "population": "83.200.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Great Britain",
+    "acronym": "GBR",
+    "flag": null,
+    "capital": "London",
+    "population": "66970000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Greece",
+    "acronym": "GRC",
+    "flag": null,
+    "capital": "Athens",
+    "population": "10.400.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Hungary",
+    "acronym": "HUN",
+    "flag": null,
+    "capital": "Budapest",
+    "population": "9 710 000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "Italy",
+    "acronym": "ITA",
+    "flag": null,
+    "capital": "Rome",
+    "population": "59.110.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Jamaica",
+    "acronym": "JAM",
+    "flag": null,
+    "capital": "Kingston",
+    "population": "2.900.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Japan",
+    "acronym": "JPN",
+    "flag": null,
+    "capital": "Tokyo",
+    "population": "126.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Netherlands",
+    "acronym": "NLD",
+    "flag": null,
+    "capital": "Amsterdam",
+    "population": "17.500.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Norway",
+    "acronym": "NOR",
+    "flag": null,
+    "capital": "Oslo",
+    "population": "5.400.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Poland",
+    "acronym": "POL",
+    "flag": null,
+    "capital": "Warsaw",
+    "population": "38.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Serbia",
+    "acronym": "SRB",
+    "flag": null,
+    "capital": "Belgrade",
+    "population": "7.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Slovenia",
+    "acronym": "SVN",
+    "flag": null,
+    "capital": "Ljubljana",
+    "population": "2.100.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "South Africa",
+    "acronym": "ZAF",
+    "flag": null,
+    "capital": "Pretoria",
+    "population": "59.620.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "South Korea",
+    "acronym": "KOR",
+    "flag": null,
+    "capital": "Seoul",
+    "population": "51.800.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Spain",
+    "acronym": "ESP",
+    "flag": null,
+    "capital": "Madrid",
+    "population": "47.420.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Sweden",
+    "acronym": "SWE",
+    "flag": null,
+    "capital": "Stockholm",
+    "population": "10.400.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Türkiye",
+    "acronym": "TUR",
+    "flag": null,
+    "capital": "Ankara",
+    "population": "82.000.000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "United Kingdom",
+    "acronym": "GBR",
+    "flag": null,
+    "capital": "London",
+    "population": "77.300.000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "United States of Ame",
+    "acronym": "USA",
+    "flag": null,
+    "capital": "Washington D.C.",
+    "population": "331.000.000",
+    "representatives": "still to be determined"
+  }
+]

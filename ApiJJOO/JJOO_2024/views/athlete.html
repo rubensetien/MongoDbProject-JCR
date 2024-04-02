@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Atletas</title>
+</head>
+<body>
+    <h1>Lista de Atletas</h1>
+    <ul>
+        <% athletes.forEach(athlete => { %>
+            <li>
+                <strong>Nombre:</strong> <%= athlete.name %><br>
+                <strong>País:</strong> <%= athlete.country %><br>
+                <strong>Equipo:</strong> <%= athlete.team %><br>
+                <strong>Edad:</strong> <%= athlete.age %><br>
+                <strong>Género:</strong> <%= athlete.gender %><br>
+                <strong>Modalidad:</strong> <%= athlete.modality %><br>
+                <strong>Medallas:</strong> <%= athlete.medals %><br>
+                <strong>Récord:</strong> <%= athlete.record %><br>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
