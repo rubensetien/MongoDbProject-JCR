@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Países</title>
+    <style>
+        #countdown {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-form input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-form input[type="submit"] {
+            height: 30px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .country-image {
+            height: 80px;
+            width: auto;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+            /* Alinea todo el texto del cuerpo al centro */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            /* Alinea todo el texto del encabezado al centro */
+        }
+
+        header img {
+            height: 80px;
+        }
+
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .carousel-item img {
+            height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <header> 
+         <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png" alt="Logo">
+    </header>
+    <a href="/"></ahref>
+
+    </a>
+    <nav>
+        <ul>
+            <li>
+            <li><a href="/">Home</a></li>
+            <li><a href="venues">Venues</a></li>
+            <li><a href="sports">Sports</a></li>
+            <li><a href="athletes">Athletes</a></li>
+            <li><a href="country">Countries</a></li>
+            </li>
+        </ul>
+    </nav>
+    <h1>Countries</h1>
+    <form class="search-form" action="/ruta_a_tu_pagina_de_resultados" method="get">
+        <input type="text" name="q" placeholder="Buscar..."> <input type="submit" value="Buscar">
+    </form>
+    <ul>
+        <% countries.forEach(country=> { %>
+            <li>
+                <%= country.country %> - <%= country.capital %> - Población: <%= country.population %>
+                            text-align: center;
+            </li>
+            <% }); %>
+    </ul>
+</body>
+
+</html>
