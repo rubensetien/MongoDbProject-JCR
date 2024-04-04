@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Olimpics Games 2024</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
-          #countdown {
-        text-align: center;
-        background-color: #f8f9fa;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 20px auto;
-        width: 50%;
-    }
+        #countdown {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 50%;
+        }
 
 
 
-    #countdown {
+        #countdown {
             text-align: center;
             padding: 20px;
             margin: 20px auto;
@@ -30,59 +31,62 @@
             font-size: 16px;
         }
 
-    .search-form {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-.search-form input[type="text"] {
-    width: 200px;
-    height: 30px;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
+        .search-form input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
 
-.search-form input[type="submit"] {
-    height: 30px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        .search-form input[type="submit"] {
+            height: 30px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.search-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    text-align: center; /* Alinea todo el texto del cuerpo al centro */
-}
+        body {
+            font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+            /* Alinea todo el texto del cuerpo al centro */
+        }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center; /* Alinea todo el texto del encabezado al centro */
-}
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            /* Alinea todo el texto del encabezado al centro */
+        }
 
-header img {
-    height: 80px;
-}
+        header img {
+            height: 80px;
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center; /* Alinea todo el texto de la lista de navegación al centro */
-}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            /* Alinea todo el texto de la lista de navegación al centro */
+        }
 
         nav ul li {
             display: inline;
@@ -98,7 +102,8 @@ nav ul {
             padding: 20px;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             color: #333;
         }
 
@@ -108,15 +113,17 @@ nav ul {
             object-fit: contain;
         }
     </style>
-     
-    
+
+
 </head>
+
 <body>
-    
+
     <header>
         <a href="/"></ahref>
-        <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png" alt="Logo">
-    </a>
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo">
+        </a>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -140,15 +147,15 @@ nav ul {
             <p id="minutes"></p>
             <p id="seconds"></p>
         </div>
-       
 
-        
-      
+
+
+
         <form class="search-form" action="/search" method="get">
-            <input type="text" name="q" placeholder="Buscar...">
-            <input type="submit" value="Buscar">
+            <input type="text" name="q" placeholder="Search...">
+            <input type="submit" value="Search">
         </form>
-        
+
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -162,40 +169,51 @@ nav ul {
                 <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
             </ol>
-        
+
             <div class="carousel-inner" data-interval="4000">
                 <div class="carousel-item active">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562434257.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item"  data-interval="4000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562621096.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item"  data-interval="4000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562821449.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item"  data-interval="4000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563188754.jpg">
+                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562434257.jpg"
+                        class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="4000">
-                    <img src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/9AC5/production/_119712693_fd71f052-59b9-4d88-8e8f-5dea6459b459.jpg">
-                </div>
-                <div class="carousel-item"  data-interval="4000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563370636.jpg">
+                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562621096.jpg"
+                        class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="4000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563798204.jpg">
+                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562821449.jpg"
+                        class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="4000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564291141.jpg">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563188754.jpg">
                 </div>
                 <div class="carousel-item" data-interval="4000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564398523.jpg">
+                    <img
+                        src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/9AC5/production/_119712693_fd71f052-59b9-4d88-8e8f-5dea6459b459.jpg">
                 </div>
-                <div class="carousel-item"  data-interval="4000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564682074.jpg">
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563370636.jpg">
                 </div>
-                <div class="carousel-item"  data-interval="2000">
-                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117572922917.jpg">
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563798204.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564291141.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564398523.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564682074.jpg">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117572922917.jpg">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -206,10 +224,10 @@ nav ul {
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-            
+
         </div>
     </section>
-    
+
 
     <script>
 
@@ -217,7 +235,7 @@ nav ul {
         var countDownDate = new Date("Jul 26, 2024 00:00:00").getTime();
 
         // Actualiza la cuenta atrás cada segundo
-        var countdownFunction = setInterval(function() {
+        var countdownFunction = setInterval(function () {
 
             // Obtiene la fecha y hora actuales
             var now = new Date().getTime();
@@ -232,10 +250,10 @@ nav ul {
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Muestra el resultado en los elementos con id="days", "hours", "minutes" y "seconds"
-            document.getElementById("days").innerHTML = days + " Días ";
-            document.getElementById("hours").innerHTML = hours + " Horas ";
-            document.getElementById("minutes").innerHTML = minutes + " Minutos ";
-            document.getElementById("seconds").innerHTML = seconds + " Segundos ";
+            document.getElementById("days").innerHTML = days + " Days ";
+            document.getElementById("hours").innerHTML = hours + " Hours ";
+            document.getElementById("minutes").innerHTML = minutes + " Minutes ";
+            document.getElementById("seconds").innerHTML = seconds + " Seconds ";
 
             // Si la cuenta atrás ha terminado, muestra un mensaje
             if (distance < 0) {
@@ -249,4 +267,5 @@ nav ul {
         <!-- Footer content goes here -->
     </footer>
 </body>
+
 </html>

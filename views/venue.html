@@ -1,97 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Venues</title>
     <style>
         #countdown {
-      text-align: center;
-      background-color: #f8f9fa;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px auto;
-      width: 50%;
-  }
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+
+        ul {
+            list-style-type: none;
+            /* Elimina los puntos de la lista */
+            padding: 0;
+            /* Elimina el padding predeterminado */
+        }
+
+        li {
+
+            margin: 10px 0;
+            /* Espacio entre cada elemento de la lista */
+            padding: 15px;
+            /* Espacio interior alrededor del contenido de la lista */
+            border-radius: 5px;
+            /* Bordes redondeados para cada elemento de la lista */
+        }
 
 
 
 
-  .search-form {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-  }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-.search-form input[type="text"] {
-  width: 200px;
-  height: 30px;
-  border: none;
-  padding: 5px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
+        .search-form input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
 
-.search-form input[type="submit"] {
-  height: 30px;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+        .search-form input[type="submit"] {
+            height: 30px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.search-form input[type="submit"]:hover {
-  background-color: #45a049;
-}
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  text-align: center; /* Alinea todo el texto del cuerpo al centro */
-}
+        .country-image {
+            height: 80px;
+            width: auto;
+        }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  text-align: center; /* Alinea todo el texto del encabezado al centro */
-}
+        body {
+            font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+            /* Alinea todo el texto del cuerpo al centro */
+        }
 
-header img {
-  height: 80px;
-}
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            /* Alinea todo el texto del encabezado al centro */
+        }
+
+        header img {
+            height: 80px;
+        }
 
 
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            /* Alinea todo el texto de la lista de navegación al centro */
+        }
 
-      nav ul li {
-          display: inline;
-          margin: 0 10px;
-      }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-      nav ul li a {
-          color: white;
-          text-decoration: none;
-      }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
 
-      section {
-          padding: 20px;
-      }
 
-      h1, h2 {
-          color: #333;
-      }
+        section {
+            padding: 20px;
+        }
 
-      .carousel-item img {
-          height: 300px;
-          width: 100%;
-          object-fit: contain;
-      }
-  </style>
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .carousel-item img {
+            height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+        .venues-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .venue-card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        flex-basis: calc(33.33% - 20px);
+        margin: 10px;
+    }
+    .venue-card:hover {
+       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+</style>
+    </style>
 </head>
+
+
 <body>
     
     <header>
@@ -109,18 +165,30 @@ header img {
         </nav>
     </header>
   
-    <h1>Lista de Venues</h1>
-    <ul>
-        <% venues.forEach(venue => { %>
-            <li>
-                <strong>Nombre:</strong> <%= venue.name %><br>
-                <strong>Deporte:</strong> <%= venue.sport %><br>
-                <strong>Ubicación:</strong> <%= venue.location %><br>
-                <strong>Capacidad:</strong> <%= venue.capacity %><br>
-                <strong>Estado:</strong> <%= venue.status %><br>
-                text-align: center; 
-            </li>
-        <% }); %>
-    </ul>
+    <h1>Venues</h1>
+    <div class="card">
+      <ul>
+          <% venues.forEach(venue => { %>
+              <li>
+                  <div class="container">
+                      <div>
+                        <h2>
+                          <%= venue.name %>
+                      </h2>
+                          <strong>Sport:</strong> <%= venue.sport %><br>
+                      </div>
+                      <div>
+                          <strong>Location:</strong> <%= venue.location %><br>
+                          <strong>Capacity:</strong> <%= venue.capacity %><br>
+                          <strong>Status:</strong> <%= venue.status %><br>
+                          <div id="map<%= venue.id %>" style="height: 400px; width: 100%;"></div>
+                      </div>
+                  </div>
+              </li>
+          <% }); %>
+      </ul>
+  </div>
+
+
 </body>
 </html>
