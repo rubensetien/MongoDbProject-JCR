@@ -1,0 +1,266 @@
+[
+    {
+      "name": "Allianz Riviera",
+      "sport": "Football",
+      "location": "Outlying venues",
+      "capacity": "35.624",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Bercy Arena",
+      "sport": "Basketball",
+      "location": "Paris Centre zone",
+      "capacity": "15.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Bercy Arena",
+      "sport": "Gymnastics",
+      "location": "Paris Centre zone",
+      "capacity": "15.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Court Simonne Mathieu ",
+      "sport": "Tennis",
+      "location": "Paris Centre zone",
+      "capacity": "9.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Court Suzanne Lenglen",
+      "sport": "Tennis",
+      "location": "Paris Centre zone",
+      "capacity": "10.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Élancourt Hill",
+      "sport": "Cycling",
+      "location": "Versailles zone",
+      "capacity": "25.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Gardens of the Palace of Versailles",
+      "sport": "Athletics",
+      "location": "Versailles zone",
+      "capacity": "80.000",
+      "status": "temporary",
+      "picture": null
+    },
+    {
+      "name": "Grand Palais",
+      "sport": "Taekwondo",
+      "location": "Paris Centre zone",
+      "capacity": "8.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Hôtel de Ville",
+      "sport": "Athletics",
+      "location": "Paris Centre zone",
+      "capacity": "N/A",
+      "status": "temporary",
+      "picture": null
+    },
+    {
+      "name": "Les Invalides",
+      "sport": "Cycling",
+      "location": "Paris Centre zone",
+      "capacity": "8.000",
+      "status": "temporary",
+      "picture": null
+    },
+    {
+      "name": "Parc des Princes",
+      "sport": "Football",
+      "location": "Paris Centre zone",
+      "capacity": "48.583",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Parc Olympique Lyonnais",
+      "sport": "Football",
+      "location": "Outlying venues",
+      "capacity": "59.186",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Paris Aquatic Centre",
+      "sport": "Waterpolo",
+      "location": "Grand Paris zone",
+      "capacity": "5.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Paris La Défense Arena",
+      "sport": "Swimming",
+      "location": "Grand Paris zone",
+      "capacity": "15.220",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Paris La Défense Arena",
+      "sport": "Waterpolo",
+      "location": "Grand Paris zone",
+      "capacity": "15.220",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Philippe Chatrier Court",
+      "sport": "Tennis",
+      "location": "Paris Centre zone",
+      "capacity": "15.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Pierre Mauroy Stadium",
+      "sport": "Basketball",
+      "location": "Outlying venues",
+      "capacity": "26.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Pierre Mauroy Stadium",
+      "sport": "Handball",
+      "location": "Outlying venues",
+      "capacity": "26.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Place de la Concorde",
+      "sport": "Basketball",
+      "location": "Paris Centre zone",
+      "capacity": "30.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Pont Alexandre III",
+      "sport": "Cycling",
+      "location": "Paris Centre zone",
+      "capacity": "1.000",
+      "status": "temporary",
+      "picture": null
+    },
+    {
+      "name": "Pont Alexandre III",
+      "sport": "Swimming",
+      "location": "Paris Centre zone",
+      "capacity": "1.000",
+      "status": "temporary",
+      "picture": null
+    },
+    {
+      "name": "Porte de La Chapelle Arena",
+      "sport": "Gymnastics",
+      "location": "Grand Paris zone",
+      "capacity": "8.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Roland Garros Stadium",
+      "sport": "Tennis",
+      "location": "Paris Centre zone",
+      "capacity": "34.000",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "South Paris Arena",
+      "sport": "Handball",
+      "location": "Paris Centre zone",
+      "capacity": "6.000",
+      "status": "temporary",
+      "picture": null
+    },
+    {
+      "name": "Stade de France",
+      "sport": "Athletics",
+      "location": "Grand Paris zone",
+      "capacity": "77.083",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Stade de France",
+      "sport": "Rugby",
+      "location": "Grand Paris zone",
+      "capacity": "77.083",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Stade de la Beaujoire",
+      "sport": "Football",
+      "location": "Outlying venues",
+      "capacity": "35.322",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Stade Geoffroy-Guichard",
+      "sport": "Football",
+      "location": "Outlying venues",
+      "capacity": "41.965",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Stade Matmut Atlantique",
+      "sport": "Football",
+      "location": "Outlying venues",
+      "capacity": "42.115",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Stade Vélodrome",
+      "sport": "Football",
+      "location": "Outlying venues",
+      "capacity": "67.394",
+      "status": "existing building",
+      "picture": null
+    },
+    {
+      "name": "Trocadéro (Pont d'Iéna) ",
+      "sport": "Athletics",
+      "location": "Paris Centre zone",
+      "capacity": "13.000 ",
+      "status": "temporary",
+      "picture": null
+    },
+    {
+      "name": "Trocadéro (Pont d'Iéna) ",
+      "sport": "Cycling",
+      "location": "Paris Centre zone",
+      "capacity": "13.000",
+      "status": "temporary",
+      "picture": null
+    },
+    {
+      "name": "Vélodrome de Saint-Quentin-en-Yvelines",
+      "sport": "Cycling",
+      "location": "Versailles zone",
+      "capacity": "5.000",
+      "status": "existing building",
+      "picture": null
+    }
+]
