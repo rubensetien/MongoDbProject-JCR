@@ -166,6 +166,17 @@
     </header>
   
     <h1>Venues</h1>
+    <form class="search-form" action="/venueSearch" method="get">
+        <select name="field">
+            <option value="name">Name</option>
+            <option value="sport">Sport</option>
+            <option value="location">Location</option>
+            <option value="capacity">Capacity</option>
+            <option value="status">Status</option>
+        </select>
+        <input type="text" name="q" placeholder="Search...">
+        <input type="submit" value="Search">
+    </form>
     <div class="card">
       <ul>
           <% venues.forEach(venue => { %>

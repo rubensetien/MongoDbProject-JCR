@@ -127,32 +127,32 @@
         }
     </style>
 </head>
-
-
-
 <body>
     <header>
         <a href="/"></ahref>
         <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png" alt="Logo">
-   
-    
 
-    </a>
-    <nav>
-        <ul>
-            <li>
-            <li><a href="/">Home</a></li>
-            <li><a href="venues">Venues</a></li>
-            <li><a href="sports">Sports</a></li>
-            <li><a href="athletes">Athletes</a></li>
-            <li><a href="country">Countries</a></li>
-            </li>
-        </ul>
-    </nav>
-</header>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="venues">Venues</a></li>
+                <li><a href="sports">Sports</a></li>
+                <li><a href="athletes">Athletes</a></li>
+                <li><a href="country">Countries</a></li>
+            </ul>
+        </nav>
+    </header>
     <h1>Countries</h1>
-    <form class="search-form" action="/ruta_a_tu_pagina_de_resultados" method="get">
-        <input type="text" name="q" placeholder="Search..."> <input type="submit" value="Search">
+    <form class="search-form" action="/countrySearch" method="get">
+        <select name="field">
+            <option value="country">Country</option>
+            <option value="acronym">Acronym</option>
+            <option value="capital">Capital</option>
+            <option value="population">Population</option>
+        </select>
+        <input type="text" name="q" placeholder="Search...">
+        <input type="submit" value="Search">
     </form>
     <ul>
         <% countries.sort((a, b) => a.country.localeCompare(b.country)).forEach(country => { %>

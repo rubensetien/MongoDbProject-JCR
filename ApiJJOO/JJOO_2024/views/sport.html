@@ -121,7 +121,12 @@
     </header>
     <section>
       <h1>Sports</h1>
-      <form class="search-form" action="/ruta_a_tu_pagina_de_resultados" method="get">
+      <form class="search-form" action="/sportSearch" method="get">
+        <select name="field">
+          <option value="name">Name</option>
+          <option value="description">Description</option>
+          <option value="history">History</option>
+        </select>
         <input type="text" name="q" placeholder="Search...">
         <input type="submit" value="Search">
       </form>
