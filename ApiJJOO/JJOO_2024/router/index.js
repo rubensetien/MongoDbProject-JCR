@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const olympicController = require('../controllers/olympicController');
+const olympicController = require('../controllers/mainController');
+const athleteController = require('../controllers/athleteController');
 
 module.exports = () => {
     router.get('/', olympicController.home);
@@ -15,9 +16,7 @@ module.exports = () => {
 
     router.get('/country', olympicController.getAllCountry);
 
-    router.get('/search', olympicController.search);
-
-
+    router.get('/athleteSearch', athleteController.searchAthlete);
     
     return router;
 }

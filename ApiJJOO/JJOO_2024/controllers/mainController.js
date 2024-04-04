@@ -52,6 +52,4 @@ exports.getAllCountry = async (req, res) => {
     }
 }
 
-exports.search = (req, res) => {
-    res.send('Search Page');
-}
+   
