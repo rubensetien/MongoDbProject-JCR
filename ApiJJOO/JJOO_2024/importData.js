@@ -8,15 +8,23 @@ const Athlete = require('./models/Athlete');
 
 // Ruta de los archivos JSON que contienen los datos
 const dataFolderPath = path.resolve(__dirname, 'data');
+
 // Conectar a MongoDB
 mongoose.connect('mongodb://localhost:27017/jjoo_2024_api')
-.then(() => {
-  console.log('Connected to MongoDB');
-  importData();
-})
-.catch((err) => {
-  console.error('Error connecting to MongoDB:', err);
-});
+  .then(() => {
+    console.log('Connected to MongoDB');
+    // Eliminar la base de datos antes de importar los datos
+    return mongoose.connection.dropDatabase();
+  })
+  .then(() => {
+    console.log('Database dropped successfully');
+    // Importar los datos
+    return importData();
+  })
+  .catch((err) => {
+    console.error('Error:', err);
+    process.exit(1);
+  });
 
 // Función para importar los datos
 const importData = async () => {
