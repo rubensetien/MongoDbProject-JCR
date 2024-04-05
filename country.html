@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Países</title>
+    <title>Countries</title>
     <style>
         #countdown {
             text-align: center;
@@ -31,11 +31,9 @@
             /* Espacio interior alrededor del contenido de la lista */
             border-radius: 5px;
             /* Bordes redondeados para cada elemento de la lista */
+            
         }
-
-
-
-
+        
         .search-form {
             display: flex;
             justify-content: center;
@@ -110,6 +108,20 @@
             text-decoration: none;
         }
 
+        form + ul li {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #000; /* Agrega un borde alrededor de cada elemento de la lista */
+            background-color: #f8f9fa; /* Cambia el color de fondo */
+            color: #333; /* Cambia el color del texto */
+            font-family: Arial, sans-serif; /* Cambia el estilo de la fuente */
+            transition: background-color 0.3s ease; /* Agrega una transición */
+        }
+
+        form + ul li:hover {
+            background-color: #e8e9ea; /* Cambia el color de fondo cuando se pasa el ratón sobre un elemento de la lista */
+        }
 
         section {
             padding: 20px;
@@ -127,37 +139,40 @@
         }
     </style>
 </head>
-
-
-
 <body>
     <header>
+        <a href="/"></ahref>
         <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png" alt="Logo">
-    </header>
-    <a href="/"></ahref>
 
-    </a>
-    <nav>
-        <ul>
-            <li>
-            <li><a href="/">Home</a></li>
-            <li><a href="venues">Venues</a></li>
-            <li><a href="sports">Sports</a></li>
-            <li><a href="athletes">Athletes</a></li>
-            <li><a href="country">Countries</a></li>
-            </li>
-        </ul>
-    </nav>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="venues">Venues</a></li>
+                <li><a href="sports">Sports</a></li>
+                <li><a href="athletes">Athletes</a></li>
+                <li><a href="country">Countries</a></li>
+            </ul>
+        </nav>
+    </header>
     <h1>Countries</h1>
-    <form class="search-form" action="/ruta_a_tu_pagina_de_resultados" method="get">
-        <input type="text" name="q" placeholder="Search..."> <input type="submit" value="Search">
+    <form class="search-form" action="/countrySearch" method="get">
+        <select name="field">
+            <option value="country">Country</option>
+            <option value="acronym">Acronym</option>
+            <option value="capital">Capital</option>
+            <option value="population">Population</option>
+        </select>
+        <input type="text" name="q" placeholder="Search...">
+        <input type="submit" value="Search">
     </form>
+    
     <ul>
         <% countries.sort((a, b) => a.country.localeCompare(b.country)).forEach(country => { %>
             
             <li>
-                <img src= "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"
-                    alt="<%= country.Canada %> flag">
+                <img src='<%= country.flag %>' style="width: 150px; height: 100px;">
+
                 <h2>
                     <%= country.country %>
                 </h2> <!-- Hace que el nombre del país sea más grande -->
