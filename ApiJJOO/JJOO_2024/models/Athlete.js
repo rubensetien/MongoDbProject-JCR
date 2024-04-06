@@ -10,7 +10,7 @@ const athleteSchema = new mongoose.Schema({
     modality: {type: String},
     medals: {type: Number},
     record: {type: String},
-    //picture: {type: String}
+    picture: {type: String}
 
 });
 const Athlete = mongoose.model('Athlete', athleteSchema);

@@ -5,6 +5,9 @@ const Country = require('./models/Country');
 const Sport = require('./models/Sport');
 const Venue = require('./models/Venue');
 const Athlete = require('./models/Athlete');
+const Team = require('./models/Team');
+const Modality = require('./models/Modality');
+const Result = require('./models/Result');  
 
 // Ruta de los archivos JSON que contienen los datos
 const dataFolderPath = path.resolve(__dirname, 'data');
@@ -44,6 +47,18 @@ const importData = async () => {
     // Leer y procesar el archivo JSON de atletas
     const athletesData = fs.readFileSync(path.join(dataFolderPath, 'athletes.json'), 'utf-8');
     await Athlete.create(JSON.parse(athletesData));
+
+    // Leer y procesar el archivo JSON de equipos
+    const teamsData = fs.readFileSync(path.join(dataFolderPath, 'teams.json'), 'utf-8');
+    await Team.create(JSON.parse(teamsData));
+
+    // Leer y procesar el archivo JSON de modalidades
+    const modalitiesData = fs.readFileSync(path.join(dataFolderPath, 'modalities.json'), 'utf-8');
+    await Modality.create(JSON.parse(modalitiesData));
+
+    // Leer y procesar el archivo JSON de resultados
+    const resultsData = fs.readFileSync(path.join(dataFolderPath, 'results.json'), 'utf-8');
+    await Result.create(JSON.parse(resultsData));
 
     console.log('Data imported successfully');
     process.exit();

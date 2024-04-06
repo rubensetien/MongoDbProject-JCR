@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Países</title>
+    <title>Athletes</title>
     <style>
         #countdown {
             text-align: center;
@@ -183,13 +183,13 @@
     <div class="athletes-grid">
       <% athletes.sort((a, b) => a.name.localeCompare(b.name)).forEach(athlete => { %>
             <div class = "athlete-card">
-              <img src="<%= athlete.image %>" alt="<%= athlete.name %>">
+              <img src='<%= athlete.picture %>' style="width: 100px; height: 175px;">
               <h2><%= athlete.name %></h2>
               <p><strong>Country:</strong> <%= athlete.country %></p>
               <p><strong>Team:</strong> <%= athlete.team %></p>
               <p><strong>Age:</strong> <%= athlete.age %></p>
               <p><strong>Gender:</strong> <%= athlete.gender %></p>
-              <p><strong>Modality:</strong> <%= athlete.modality %></p>
+              <p><strong>Modality:</strong> <a href="/modality?modality=<%= athlete.modality %>"><%= athlete.modality %></a></p>
               <p><strong>Medals:</strong> <%= athlete.medals %></p>
               </div>
         <% }); %>
