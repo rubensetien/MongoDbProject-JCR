@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Venues</title>
     <style>
         #countdown {
@@ -19,21 +19,21 @@
 
         ul {
             list-style-type: none;
-           
+
             padding: 0;
-           
+
         }
 
         li {
 
             margin: 15px 0;
-            
+
             padding: 20px;
-            
+
             border-radius: 5px;
-            
+
         }
-        
+
 
 
 
@@ -78,9 +78,9 @@
             padding: 0;
             background-color: #f0f0f0;
             text-align: center;
-            
+
         }
-       
+
 
 
         header {
@@ -88,7 +88,7 @@
             color: white;
             padding: 10px 0;
             text-align: center;
-            
+
         }
 
         header img {
@@ -100,7 +100,7 @@
             list-style-type: none;
             padding: 0;
             text-align: center;
-            
+
         }
 
         nav ul li {
@@ -124,58 +124,85 @@
         }
 
         .container {
-            border: 1px solid #000; /* Esto crea un borde alrededor de cada elemento con la clase "container" */
-            
+            position: relative;
+            color: #000;
+            text-transform: uppercase;
         }
+
+        .container::before {
+            content: "";
+            background-image: url('https://cdn.sortiraparis.com/images/80/74061/614960-paris-2024-la-carte-complete-des-sites-olympiques-devoilee.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container h1,
+        .container h2 {
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
         .carousel-item img {
             height: 300px;
             width: 100%;
             object-fit: contain;
         }
+
         .venues-grid {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between; /* Esto distribuirá el espacio restante entre las tarjetas */
+            justify-content: space-between;
+            /* Esto distribuirá el espacio restante entre las tarjetas */
         }
 
         .venue-card {
-            background-image: url('https://fotografias.larazon.es/clipping/cmsimages01/2022/07/13/A8099DCC-8A3F-49C9-A34E-002A97857838/58.jpg?crop=1006,570,x0,y824&width=1000&height=567&optimize=low&format=webply');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             flex: 0 0 calc(20% - 5px);
             margin-bottom: 20px;
-            height: 200px; /* Esto define una altura para las tarjetas */
+            height: 200px;
+            /* This defines a height for the cards */
         }
-    .venue-card:hover {
-       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    
-</style>
+
+        .venue-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
     </style>
 </head>
 
 
 <body>
-    
+
     <header>
         <a href="/">
-            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png" alt="Logo"></a>
-            <nav>
-              <ul>
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo"></a>
+        <nav>
+            <ul>
                 <li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="venues">Venues</a></li>
-                    <li><a href="sports">Sports</a></li>
-                    <li><a href="athletes">Athletes</a></li>
-                    <li><a href="country">Countries</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="venues">Venues</a></li>
+                <li><a href="sports">Sports</a></li>
+                <li><a href="athletes">Athletes</a></li>
+                <li><a href="country">Countries</a></li>
             </ul>
         </nav>
     </header>
-  
+
     <h1>Venues</h1>
     <form class="search-form" action="/venueSearch" method="get">
         <select name="field">
@@ -189,33 +216,35 @@
         <input type="submit" value="Search">
     </form>
     <div class="card">
-      <ul>
-          <% venues.forEach(venue => { %>
-              <li>
-                  <div 
-                  
-                  
-                  class="container">
-                      <div>
-                        <img src='<%= venue.picture %>' style="width: 100px; height: 175px;">
-                        <h2>
-                          <%= venue.name %>
-                      </h2>
-                          <strong>Sport:</strong> <%= venue.sport %><br>
-                      </div>
-                      <div>
-                        
-                          <strong>Location:</strong> <%= venue.location %><br>
-                          <strong>Capacity:</strong> <%= venue.capacity %><br>
-                          <strong>Status:</strong> <%= venue.status %><br>
-                          <div id="map<%= venue.id %>" style="height: 400px; width: 100%;"></div>
-                      </div>
-                  </div>
-              </li>
-          <% }); %>
-      </ul>
-  </div>
+        <ul>
+            <% venues.forEach(venue=> { %>
+                <li>
+                    <div class="container">
+                        <div>
+                            <img src='<%= venue.picture %>' style="width: 100px; height: 175px;">
+                            <h2>
+                                <%= venue.name %>
+                            </h2>
+                            <strong>Sport:</strong>
+                            <%= venue.sport %><br>
+                        </div>
+                        <div>
+
+                            <strong>Location:</strong>
+                            <%= venue.location %><br>
+                                <strong>Capacity:</strong>
+                                <%= venue.capacity %><br>
+                                    <strong>Status:</strong>
+                                    <%= venue.status %><br>
+                                        <div id="map<%= venue.id %>" style="height: 400px; width: 100%;"></div>
+                        </div>
+                    </div>
+                </li>
+                <% }); %>
+        </ul>
+    </div>
 
 
 </body>
+
 </html>
