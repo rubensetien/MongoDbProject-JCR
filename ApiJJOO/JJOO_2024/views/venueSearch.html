@@ -8,17 +8,6 @@
     <style>
         #countdown {
             text-align: center;
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-            width: 50%;
-        }
-
-
-
-        #countdown {
-            text-align: center;
             padding: 20px;
             margin: 20px auto;
             width: 50%;
@@ -65,7 +54,6 @@
             padding: 0;
             background-color: #f0f0f0;
             text-align: center;
-            /* Alinea todo el texto del cuerpo al centro */
         }
 
         header {
@@ -73,7 +61,6 @@
             color: white;
             padding: 10px 0;
             text-align: center;
-            /* Alinea todo el texto del encabezado al centro */
         }
 
         header img {
@@ -84,7 +71,6 @@
             list-style-type: none;
             padding: 0;
             text-align: center;
-            /* Alinea todo el texto de la lista de navegación al centro */
         }
 
         nav ul li {
@@ -111,11 +97,39 @@
             width: 100%;
             object-fit: contain;
         }
+
+        /* Estilo para el fondo de la vista */
+        .container {
+            position: relative;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        .container::before {
+            content: "";
+            background-image: url('https://cdn.sortiraparis.com/images/80/74061/614960-paris-2024-la-carte-complete-des-sites-olympiques-devoilee.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container h1,
+        .container h2 {
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
 <body>
-
     <header>
         <a href="/"></ahref>
             <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
@@ -133,26 +147,31 @@
     </header>
     <h1>Venues Search Results</h1>
     <div class="card">
-        <ul>
-            <% venues.forEach(venue => { %>
-                <div class="container">
-                    <div>
-                        <h2>
-                            <%= venue.name %>
-                        </h2>
-                        <strong>Sport:</strong> <%= venue.sport %><br>
-                    </div>
-                    <div>
-                        <strong>Location:</strong> <%= venue.location %><br>
-                        <strong>Capacity:</strong> <%= venue.capacity %><br>
-                        <strong>Status:</strong> <%= venue.status %><br>
-                        <div id="map<%= venue.id %>" style="height: 400px; width: 100%;"></div>
-                    </div>
+        <% venues.forEach(venue=> { %>
+        <li>
+            <div class="container">
+                <div>
+                    <img src='<%= venue.picture %>' style="width: 100px; height: 175px;">
+                    <h2>
+                        <%= venue.name %>
+                    </h2>
+                    <strong>Sport:</strong>
+                    <%= venue.sport %><br>
                 </div>
-            <% }); %>
-        </ul>
+                <div>
+
+                    <strong>Location:</strong>
+                    <%= venue.location %><br>
+                    <strong>Capacity:</strong>
+                    <%= venue.capacity %><br>
+                    <strong>Status:</strong>
+                    <%= venue.status %><br>
+                    <div id="map<%= venue.id %>" style="height: 400px; width: 100%;"></div>
+                </div>
+            </div>
+        </li>
+        <% }); %>
     </div>
-  
-  
-  </body>
-  </html>
+</body>
+
+</html>

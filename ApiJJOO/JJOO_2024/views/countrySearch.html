@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country Search Results</title>
     <style>
-        #countdown {
+       #countdown {
             text-align: center;
             background-color: #f8f9fa;
             padding: 20px;
@@ -16,20 +16,24 @@
         }
 
 
-
-        #countdown {
-            text-align: center;
-            padding: 20px;
-            margin: 20px auto;
-            width: 50%;
+        ul {
+            list-style-type: none;
+            /* Elimina los puntos de la lista */
+            padding: 0;
+            /* Elimina el padding predeterminado */
         }
 
-        #countdown p {
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 16px;
-        }
+        li {
 
+            margin: 10px 0;
+            /* Espacio entre cada elemento de la lista */
+            padding: 15px;
+            /* Espacio interior alrededor del contenido de la lista */
+            border-radius: 5px;
+            /* Bordes redondeados para cada elemento de la lista */
+            
+        }
+        
         .search-form {
             display: flex;
             justify-content: center;
@@ -59,8 +63,14 @@
             background-color: #45a049;
         }
 
+        .country-image {
+            height: 80px;
+            width: auto;
+        }
+
         body {
             font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
+
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
@@ -80,6 +90,7 @@
             height: 80px;
         }
 
+
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -95,6 +106,21 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+        }
+
+        form + ul li {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #000; /* Agrega un borde alrededor de cada elemento de la lista */
+            background-color: #f8f9fa; /* Cambia el color de fondo */
+            color: #333; /* Cambia el color del texto */
+            font-family: Arial, sans-serif; /* Cambia el estilo de la fuente */
+            transition: background-color 0.3s ease; /* Agrega una transición */
+        }
+
+        form + ul li:hover {
+            background-color: #e8e9ea; /* Cambia el color de fondo cuando se pasa el ratón sobre un elemento de la lista */
         }
 
         section {
@@ -113,9 +139,7 @@
         }
     </style>
 </head>
-
 <body>
-
     <header>
         <a href="/"></ahref>
             <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
@@ -131,15 +155,35 @@
             </ul>
         </nav>
     </header>
-
     <h1>Country Search Results</h1>
+    <form class="search-form" action="/countrySearch" method="get">
+        <select name="field">
+            <option value="country">Country</option>
+            <option value="acronym">Acronym</option>
+            <option value="capital">Capital</option>
+            <option value="population">Population</option>
+        </select>
+        <input type="text" name="q" placeholder="Search...">
+        <input type="submit" value="Search">
+    </form>
+    
     <ul>
         <% countries.sort((a, b) => a.country.localeCompare(b.country)).forEach(country => { %>
-            <img src="<%= country.flag %>" alt="<%= country.country %> flag" class="country-image">
-            <h2><%= country.country %></h2>
-            <p>Capital: <%= country.capital %></p>
-            <p>Population: <%= country.population %></p>
-        <% }); %>
+            
+            <li>
+                <img src='<%= country.flag %>' style="width: 150px; height: 100px;">
+
+                <h2>
+                    <%= country.country %>
+                </h2> <!-- Hace que el nombre del país sea más grande -->
+                <p>Capital: <%= country.capital %>
+                </p> <!-- Muestra la capital debajo del nombre del país -->
+                <p>Population: <%= country.population %>
+                </p> <!-- Muestra la población debajo de la capital -->
+            </li>
+            <% }) %>
+
+
     </ul>
 </body>
 

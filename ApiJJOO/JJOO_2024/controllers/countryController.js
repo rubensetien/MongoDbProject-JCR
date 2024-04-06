@@ -32,6 +32,12 @@ exports.searchCountry = async (req, res) => {
 
         // Ejecutar la consulta en la base de datos
         const countries = await Country.find(query);
+
+        if (countries.length === 0) {
+            // Si no se encuentran países, renderizar una vista de error personalizada
+            return res.render('error', { message: 'No countries found' });
+        }
+        
         
         // Renderizar la vista con los países encontrados
         res.render('countrySearch', { countries });
