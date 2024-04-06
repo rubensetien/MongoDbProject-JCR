@@ -16,8 +16,6 @@
             width: 50%;
         }
 
-
-
         #countdown {
             text-align: center;
             padding: 20px;
@@ -29,6 +27,13 @@
             display: inline-block;
             margin: 0 10px;
             font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+
+            padding: 0;
+
         }
 
         .search-form {
@@ -66,7 +71,7 @@
             padding: 0;
             background-color: #f0f0f0;
             text-align: center;
-            
+
         }
 
         header {
@@ -74,18 +79,33 @@
             color: white;
             padding: 10px 0;
             text-align: center;
-            
+
         }
 
         header img {
             height: 80px;
         }
 
+        nav {
+            text-align: center;
+            /* Centrar el menú */
+        }
+
+        li {
+
+            margin: 10px 0;
+
+            padding: 15px;
+
+            border-radius: 5px;
+
+        }
+
         nav ul {
             list-style-type: none;
             padding: 0;
             text-align: center;
-           
+
         }
 
         nav ul li {
@@ -108,12 +128,26 @@
         }
 
         .carousel-item img {
-            height: 300px;
+            height: 350px;
             width: 100%;
             object-fit: contain;
+            transition: transform 2s ease;
+        }
+
+        .carousel-indicators li {
+            width: 0px;
+            height: 0px;
+            background-color: #888;
+            border: none;
+            /* Añade esto */
+            margin: 0;
+            /* Y esto */
+        }
+
+        .carousel-indicators {
+            display: none;
         }
     </style>
-
 
 </head>
 
@@ -223,31 +257,31 @@
 
     <script>
 
-        
+
         var countDownDate = new Date("Jul 26, 2024 00:00:00").getTime();
 
-       
+
         var countdownFunction = setInterval(function () {
 
-           
+
             var now = new Date().getTime();
 
-           
+
             var distance = countDownDate - now;
 
-           
+
             var days = Math.floor(distance / (1000 * 60 * 60 * 24));
             var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-           
+
             document.getElementById("days").innerHTML = days + " Days ";
             document.getElementById("hours").innerHTML = hours + " Hours ";
             document.getElementById("minutes").innerHTML = minutes + " Minutes ";
             document.getElementById("seconds").innerHTML = seconds + " Seconds ";
 
-           
+
             if (distance < 0) {
                 clearInterval(countdownFunction);
                 document.getElementById("countdown").innerHTML = "¡Los Juegos Olímpicos de París 2024 han comenzado!";
@@ -256,7 +290,7 @@
     </script>
 
     <footer>
-      
+
     </footer>
 </body>
 

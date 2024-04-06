@@ -18,22 +18,21 @@
 
         ul {
             list-style-type: none;
-            /* Elimina los puntos de la lista */
+
             padding: 0;
-            /* Elimina el padding predeterminado */
+
         }
 
         li {
 
             margin: 10px 0;
-            /* Espacio entre cada elemento de la lista */
+
             padding: 15px;
-            /* Espacio interior alrededor del contenido de la lista */
+
             border-radius: 5px;
-            /* Bordes redondeados para cada elemento de la lista */
-            
+
         }
-        
+
         .search-form {
             display: flex;
             justify-content: center;
@@ -75,7 +74,7 @@
             padding: 0;
             background-color: #f0f0f0;
             text-align: center;
-            /* Alinea todo el texto del cuerpo al centro */
+
         }
 
         header {
@@ -83,7 +82,7 @@
             color: white;
             padding: 10px 0;
             text-align: center;
-            /* Alinea todo el texto del encabezado al centro */
+
         }
 
         header img {
@@ -95,7 +94,7 @@
             list-style-type: none;
             padding: 0;
             text-align: center;
-            /* Alinea todo el texto de la lista de navegación al centro */
+
         }
 
         nav ul li {
@@ -108,19 +107,20 @@
             text-decoration: none;
         }
 
-        form + ul li {
+        form+ul li {
             margin: 10px 0;
             padding: 15px;
             border-radius: 5px;
-            border: 1px solid #000; /* Agrega un borde alrededor de cada elemento de la lista */
-            background-color: #f8f9fa; /* Cambia el color de fondo */
-            color: #333; /* Cambia el color del texto */
-            font-family: Arial, sans-serif; /* Cambia el estilo de la fuente */
-            transition: background-color 0.3s ease; /* Agrega una transición */
+            border: 1px solid #000;
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease;
         }
 
-        form + ul li:hover {
-            background-color: #e8e9ea; /* Cambia el color de fondo cuando se pasa el ratón sobre un elemento de la lista */
+        form+ul li:hover {
+            background-color: #e8e9ea;
+           
         }
 
         section {
@@ -139,10 +139,12 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <a href="/"></ahref>
-        <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png" alt="Logo">
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo">
 
         </a>
         <nav>
@@ -166,20 +168,23 @@
         <input type="text" name="q" placeholder="Search...">
         <input type="submit" value="Search">
     </form>
-    
+
     <ul>
-        <% countries.sort((a, b) => a.country.localeCompare(b.country)).forEach(country => { %>
-            
+        <% countries.sort((a, b)=> a.country.localeCompare(b.country)).forEach(country => { %>
+
             <li>
                 <img src='<%= country.flag %>' style="width: 150px; height: 100px;">
 
                 <h2>
                     <%= country.country %>
-                </h2> <!-- Hace que el nombre del país sea más grande -->
+                </h2>
+                <p>Acronym: <%= country.acronym %>
+                </p>
                 <p>Capital: <%= country.capital %>
-                </p> <!-- Muestra la capital debajo del nombre del país -->
+                </p>
                 <p>Population: <%= country.population %>
-                </p> <!-- Muestra la población debajo de la capital -->
+                </p>
+
             </li>
             <% }) %>
 
