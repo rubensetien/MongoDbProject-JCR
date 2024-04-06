@@ -1,0 +1,194 @@
+[
+    {
+      "id": 1,
+      "country": "United States of Ame",
+      "modality": "Basketball",
+      "category": "Male"
+    },
+    {
+      "id": 2,
+      "country": "United States of Ame",
+      "modality": "Basketball",
+      "category": "Female"
+    },
+    {
+      "id": 3,
+      "country": "France",
+      "modality": "Basketball",
+      "category": "Male"
+    },
+    {
+      "id": 4,
+      "country": "Spain",
+      "modality": "Basketball",
+      "category": "Male"
+    },
+    {
+      "id": 5,
+      "country": "Slovenia",
+      "modality": "Basketball",
+      "category": "Male"
+    },
+    {
+      "id": 6,
+      "country": "Spain",
+      "modality": "Basketball",
+      "category": "Female"
+    },
+    {
+      "id": 7,
+      "country": "France",
+      "modality": "Basketball",
+      "category": "Female"
+    },
+    {
+      "id": 8,
+      "country": "Canada",
+      "modality": "Basketball",
+      "category": "Female"
+    },
+    {
+      "id": 9,
+      "country": "Spain",
+      "modality": "Handball",
+      "category": "Male"
+    },
+    {
+      "id": 10,
+      "country": "France",
+      "modality": "Handball",
+      "category": "Male"
+    },
+    {
+      "id": 11,
+      "country": "Germany",
+      "modality": "Handball",
+      "category": "Male"
+    },
+    {
+      "id": 12,
+      "country": "Sweden",
+      "modality": "Handball",
+      "category": "Male"
+    },
+    {
+      "id": 13,
+      "country": "Spain",
+      "modality": "Handball",
+      "category": "Female"
+    },
+    {
+      "id": 14,
+      "country": "Norway",
+      "modality": "Handball",
+      "category": "Female"
+    },
+    {
+      "id": 15,
+      "country": "Denmark",
+      "modality": "Handball",
+      "category": "Female"
+    },
+    {
+      "id": 16,
+      "country": "Netherlands",
+      "modality": "Handball",
+      "category": "Female"
+    },
+    {
+      "id": 17,
+      "country": "Spain",
+      "modality": "Football",
+      "category": "Male"
+    },
+    {
+      "id": 18,
+      "country": "Brazil",
+      "modality": "Football",
+      "category": "Male"
+    },
+    {
+      "id": 19,
+      "country": "France",
+      "modality": "Football",
+      "category": "Male"
+    },
+    {
+      "id": 20,
+      "country": "England",
+      "modality": "Football",
+      "category": "Male"
+    },
+    {
+      "id": 21,
+      "country": "Spain",
+      "modality": "Football",
+      "category": "Female"
+    },
+    {
+      "id": 22,
+      "country": "France",
+      "modality": "Football",
+      "category": "Female"
+    },
+    {
+      "id": 23,
+      "country": "England",
+      "modality": "Football",
+      "category": "Female"
+    },
+    {
+      "id": 24,
+      "country": "United States of Ame",
+      "modality": "Football",
+      "category": "Female"
+    },
+    {
+      "id": 25,
+      "country": "Serbia",
+      "modality": "Waterpolo",
+      "category": "Male"
+    },
+    {
+      "id": 26,
+      "country": "Italy",
+      "modality": "Waterpolo",
+      "category": "Male"
+    },
+    {
+      "id": 28,
+      "country": "Croatia",
+      "modality": "Waterpolo",
+      "category": "Male"
+    },
+    {
+      "id": 29,
+      "country": "Spain",
+      "modality": "Waterpolo",
+      "category": "Male"
+    },
+    {
+      "id": 30,
+      "country": "United States of Ame",
+      "modality": "Waterpolo",
+      "category": "Female"
+    },
+    {
+      "id": 31,
+      "country": "Spain",
+      "modality": "Waterpolo",
+      "category": "Female"
+    },
+    {
+      "id": 32,
+      "country": "Italy",
+      "modality": "Waterpolo",
+      "category": "Female"
+    },
+    {
+      "id": 33,
+      "country": "Hungary",
+      "modality": "Waterpolo",
+      "category": "Female"
+    }
+]

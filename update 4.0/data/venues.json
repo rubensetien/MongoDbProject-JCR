@@ -1,0 +1,266 @@
+[
+  {
+    "name": "Allianz Riviera",
+    "sport": "Football",
+    "location": "Outlying venues",
+    "capacity": "35.624",
+    "status": "existing building",
+    "picture": "https://www.palco23.com/files//2020/19_redaccion/competiciones/futbol/ligue-1/niza/allianz-riviera-ogc-niza-728.jpg"
+  },
+  {
+    "name": "Bercy Arena",
+    "sport": "Basketball",
+    "location": "Paris Centre zone",
+    "capacity": "15.000",
+    "status": "existing building",
+    "picture": "https://cdn.sortiraparis.com/images/80/97166/724838-champion-des-pistes-des-animations-sportives-gratuites-autour-des-jo-a-tester-a-l-accor-arena.jpg"
+  },
+  {
+    "name": "Bercy Arena",
+    "sport": "Gymnastics",
+    "location": "Paris Centre zone",
+    "capacity": "15.000",
+    "status": "existing building",
+    "picture": "https://cdn.sortiraparis.com/images/80/97166/724838-champion-des-pistes-des-animations-sportives-gratuites-autour-des-jo-a-tester-a-l-accor-arena.jpg"
+  },
+  {
+    "name": "Court Simonne Mathieu ",
+    "sport": "Tennis",
+    "location": "Paris Centre zone",
+    "capacity": "9.000",
+    "status": "existing building",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Court_Simonne_Mathieu.jpg/1024px-Court_Simonne_Mathieu.jpg"
+  },
+  {
+    "name": "Court Suzanne Lenglen",
+    "sport": "Tennis",
+    "location": "Paris Centre zone",
+    "capacity": "10.000",
+    "status": "existing building",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Suzanne_Lenglen_Court%2C_Roland_Garros%2C_2_June_2019.jpg"
+  },
+  {
+    "name": "Élancourt Hill",
+    "sport": "Cycling",
+    "location": "Versailles zone",
+    "capacity": "25.000",
+    "status": "existing building",
+    "picture": "https://projets.ouvrages-olympiques.fr/wp-content/uploads/2021/06/Sennse-JO-Elancourt-05-21-0189-565x317-1.jpeg"
+  },
+  {
+    "name": "Gardens of the Palace of Versailles",
+    "sport": "Athletics",
+    "location": "Versailles zone",
+    "capacity": "80.000",
+    "status": "temporary",
+    "picture": "https://cdn.britannica.com/76/130076-050-31128A3D/Latona-Fountain-Balthazard-Marsy-Gaspard-Andre-Le.jpg"
+  },
+  {
+    "name": "Grand Palais",
+    "sport": "Taekwondo",
+    "location": "Paris Centre zone",
+    "capacity": "8.000",
+    "status": "existing building",
+    "picture": "https://media.traveler.es/photos/6137839bc6202df759161aaf/master/w_1600,c_limit/65713.jpg"
+  },
+  {
+    "name": "Hôtel de Ville",
+    "sport": "Athletics",
+    "location": "Paris Centre zone",
+    "capacity": "N/A",
+    "status": "temporary",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Paris-municipalidade.jpg"
+  },
+  {
+    "name": "Les Invalides",
+    "sport": "Cycling",
+    "location": "Paris Centre zone",
+    "capacity": "8.000",
+    "status": "temporary",
+    "picture": "https://d3iso9mq9tb10q.cloudfront.net/magefan_blog/l/e/les-invalides-paris-big-bus-tours-jan-2017_3.jpg"
+  },
+  {
+    "name": "Parc des Princes",
+    "sport": "Football",
+    "location": "Paris Centre zone",
+    "capacity": "48.583",
+    "status": "existing building",
+    "picture": "https://phantom-marca.unidadeditorial.es/f3afe45cff48efa6526acddba066752d/assets/multimedia/imagenes/2020/06/03/15911635917198.jpg"
+  },
+  {
+    "name": "Parc Olympique Lyonnais",
+    "sport": "Football",
+    "location": "Outlying venues",
+    "capacity": "59.186",
+    "status": "existing building",
+    "picture": "https://www.signify.com/b-dam/b2b-li/es_MX/company/newsroom/2017/arena/masthead-Philips-Lighting_Parc_Olympique_Lyonnais_stadium-S.jpg"
+  },
+  {
+    "name": "Paris Aquatic Centre",
+    "sport": "Waterpolo",
+    "location": "Grand Paris zone",
+    "capacity": "5.000",
+    "status": "existing building",
+    "picture": "https://static.dezeen.com/uploads/2020/09/paris-olympic-aqautic-centre-timber-2024-venhoevencs_dezeen_2364_col_2.jpg"
+  },
+  {
+    "name": "Paris La Défense Arena",
+    "sport": "Swimming",
+    "location": "Grand Paris zone",
+    "capacity": "15.220",
+    "status": "existing building",
+    "picture": "https://www.floornature.es/media/photos/30/14625/01_u-arena_de-portzamparc_full.jpg"
+  },
+  {
+    "name": "Paris La Défense Arena",
+    "sport": "Waterpolo",
+    "location": "Grand Paris zone",
+    "capacity": "15.220",
+    "status": "existing building",
+    "picture": "https://www.floornature.es/media/photos/30/14625/01_u-arena_de-portzamparc_full.jpg"
+  },
+  {
+    "name": "Philippe Chatrier Court",
+    "sport": "Tennis",
+    "location": "Paris Centre zone",
+    "capacity": "15.000",
+    "status": "existing building",
+    "picture": "https://www.shutterstock.com/preview-440/12070023k/140f4a37/Shutterstock_12070023k.jpg"
+  },
+  {
+    "name": "Pierre Mauroy Stadium",
+    "sport": "Basketball",
+    "location": "Outlying venues",
+    "capacity": "26.000",
+    "status": "existing building",
+    "picture": "https://medias.paris2024.org/uploads/2021/07/LIL_1_Stade-de-Lille_Paris2024-min-scaled.jpg?x-oss-process=image/resize,w_2560,h_1610,m_lfit/format,webp"
+  },
+  {
+    "name": "Pierre Mauroy Stadium",
+    "sport": "Handball",
+    "location": "Outlying venues",
+    "capacity": "26.000",
+    "status": "existing building",
+    "picture": "https://medias.paris2024.org/uploads/2021/07/LIL_1_Stade-de-Lille_Paris2024-min-scaled.jpg?x-oss-process=image/resize,w_2560,h_1610,m_lfit/format,webp"
+  },
+  {
+    "name": "Place de la Concorde",
+    "sport": "Basketball",
+    "location": "Paris Centre zone",
+    "capacity": "30.000",
+    "status": "existing building",
+    "picture": "https://img.olympics.com/images/image/private/t_s_16_9_g_auto/t_s_w1920/f_auto/primary/ejdtqwckzvomamusfnao"
+  },
+  {
+    "name": "Pont Alexandre III",
+    "sport": "Cycling",
+    "location": "Paris Centre zone",
+    "capacity": "1.000",
+    "status": "temporary",
+    "picture": "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/506000/506880-pont-alexandre-iii.jpg"
+  },
+  {
+    "name": "Pont Alexandre III",
+    "sport": "Swimming",
+    "location": "Paris Centre zone",
+    "capacity": "1.000",
+    "status": "temporary",
+    "picture": "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/506000/506880-pont-alexandre-iii.jpg"
+  },
+  {
+    "name": "Porte de La Chapelle Arena",
+    "sport": "Gymnastics",
+    "location": "Grand Paris zone",
+    "capacity": "8.000",
+    "status": "existing building",
+    "picture": "https://cdn.dmcl.biz/media/image/259102/o/Paris.jpeg"
+  },
+  {
+    "name": "Roland Garros Stadium",
+    "sport": "Tennis",
+    "location": "Paris Centre zone",
+    "capacity": "34.000",
+    "status": "existing building",
+    "picture": "https://cdn.getyourguide.com/img/tour/627a561753448.jpeg/145.jpg"
+  },
+  {
+    "name": "South Paris Arena",
+    "sport": "Handball",
+    "location": "Paris Centre zone",
+    "capacity": "6.000",
+    "status": "temporary",
+    "picture": "https://www.jit.cu/images/content/20-Paris-JJOO.jpg"
+  },
+  {
+    "name": "Stade de France",
+    "sport": "Athletics",
+    "location": "Grand Paris zone",
+    "capacity": "77.083",
+    "status": "existing building",
+    "picture": "https://cdn.getyourguide.com/img/tour/faf0105d2e712a01.jpeg/145.jpg"
+  },
+  {
+    "name": "Stade de France",
+    "sport": "Rugby",
+    "location": "Grand Paris zone",
+    "capacity": "77.083",
+    "status": "existing building",
+    "picture": "https://cdn.getyourguide.com/img/tour/faf0105d2e712a01.jpeg/145.jpg"
+  },
+  {
+    "name": "Stade de la Beaujoire",
+    "sport": "Football",
+    "location": "Outlying venues",
+    "capacity": "35.322",
+    "status": "existing building",
+    "picture": "https://static.wixstatic.com/media/3ff0b6_3ad94d606e5547cab055a680fd3ad35af000.jpg/v1/fill/w_1263,h_369,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/3ff0b6_3ad94d606e5547cab055a680fd3ad35af000.jpg"
+  },
+  {
+    "name": "Stade Geoffroy-Guichard",
+    "sport": "Football",
+    "location": "Outlying venues",
+    "capacity": "41.965",
+    "status": "existing building",
+    "picture": "https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2016/07/28/14697140995853.jpg"
+  },
+  {
+    "name": "Stade Matmut Atlantique",
+    "sport": "Football",
+    "location": "Outlying venues",
+    "capacity": "42.115",
+    "status": "existing building",
+    "picture": "https://www.francebleu.fr/s3/cruiser-production/2023/01/522175db-2b1c-4bb5-8ea2-e9c4d58b226e/1200x680_stade.jpg"
+  },
+  {
+    "name": "Stade Vélodrome",
+    "sport": "Football",
+    "location": "Outlying venues",
+    "capacity": "67.394",
+    "status": "existing building",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Stade_V%C3%A9lodrome_1.jpg/1920px-Stade_V%C3%A9lodrome_1.jpg"
+  },
+  {
+    "name": "Trocadéro (Pont d'Iéna)",
+    "sport": "Athletics",
+    "location": "Paris Centre zone",
+    "capacity": "13.000 ",
+    "status": "temporary",
+    "picture": "https://cdn.getyourguide.com/img/location/57766f35f3119.jpeg/68.jpg"
+  },
+  {
+    "name": "Trocadéro (Pont d'Iéna) ",
+    "sport": "Cycling",
+    "location": "Paris Centre zone",
+    "capacity": "13.000",
+    "status": "temporary",
+    "picture": "https://cdn.getyourguide.com/img/location/57766f35f3119.jpeg/68.jpg"
+  },
+  {
+    "name": "Vélodrome de Saint-Quentin-en-Yvelines",
+    "sport": "Cycling",
+    "location": "Versailles zone",
+    "capacity": "5.000",
+    "status": "existing building",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Journ%C3%A9e_portes_ouvertes_au_v%C3%A9lodrome_de_Saint-Quentin-en-Yvelines_le_1er_f%C3%A9vrier_2014_-_78.jpg/1280px-Journ%C3%A9e_portes_ouvertes_au_v%C3%A9lodrome_de_Saint-Quentin-en-Yvelines_le_1er_f%C3%A9vrier_2014_-_78.jpg"
+  }
+]
