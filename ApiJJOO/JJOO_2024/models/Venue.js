@@ -6,7 +6,7 @@ const venueSchema = new mongoose.Schema({
     location: {type: String},
     capacity: {type: String },
     status: {type: String},
-    //picture: {type: String}
+    picture: {type: String}
   });
 
 const Venue = mongoose.model('Venue', venueSchema);

@@ -5,6 +5,7 @@ const athleteController = require('../controllers/athleteController');
 const countryController = require('../controllers/countryController');
 const venueController = require('../controllers/venueController');
 const sportController = require('../controllers/sportController');
+const modalityController = require('../controllers/modalityController');
 
 module.exports = () => {
     router.get('/', mainController.home);
@@ -26,6 +27,8 @@ module.exports = () => {
     router.get('/venueSearch', venueController.searchVenue);
 
     router.get('/sportSearch', sportController.searchSport);
+
+    router.get('/modality', modalityController.getModality);
 
     return router;
 }
