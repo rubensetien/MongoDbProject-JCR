@@ -321,7 +321,7 @@
     "modality": "Single tennis",
     "medals": 0,
     "record": "4 Grand Slams, 1 runner-up Grand Slam",
-    "picture": "https://images.sportschau.de/image/aaba0950-a8fc-4677-afa7-865c1a5df14e/AAABiGJB7P4/AAABjcWe3Cg/20x9-1280/dpa-marta-kostjuk-l-geht-an-aryna-sabalenka-vorbei-ohne-den-obligatorischen-handschlag-100.webp"
+    "picture": "https://img.olympics.com/images/image/private/t_1-1_300/f_auto/v1705144396/primary/a4q1oegn4pbhc9w9rmti.png"
   },
   {
     "id": 28,
@@ -333,7 +333,7 @@
     "modality": "Single tennis",
     "medals": 0,
     "record": "4 Grand Slams, 1 runner-up Grand Slam",
-    "picture": "https://images.sportschau.de/image/b3b53da3-e97e-403d-bb65-9b6072755ebf/AAABgyld6AA/AAABjcWe3Cg/20x9-1280/iga-swaitek-gewinnt-us-open-100.webp"
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRvjcJViciWzPlgaJPMScgLumIVY3vjZcOCygerBCODg&s.png"
   },
   {
     "id": 30,
@@ -342,7 +342,7 @@
      
     "age": 32,
     "gender": "Male",
-    "modality": "Single fight +80",
+    "modality": "Single fight 80",
     "medals": 0,
     "record": "1 gold, 1 silver, 3 bronzes",
     "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ymiEiZC2LAWO5PZic4OSBxMJXlpo3Mi1wJZ_73XpMg&s.png"
@@ -354,7 +354,7 @@
      
     "age": 37,
     "gender": "Male",
-    "modality": "Single fight +80",
+    "modality": "Single fight 80",
     "medals": 0,
     "record": "2 golds, 1 silver, 1 bronze",
     "picture": "https://www.taekwondodata.com/images/persons/450/12672_01_01.jpg"
@@ -366,7 +366,7 @@
      
     "age": 35,
     "gender": "Male",
-    "modality": "Single fight +80",
+    "modality": "Single fight 80",
     "medals": 0,
     "record": "8 gold, 2 bronzes",
     "picture": "https://www.taekwondodata.com/images/persons/450/11834_02_02.jpg"
@@ -378,7 +378,7 @@
      
     "age": 34,
     "gender": "Male",
-    "modality": "Single fight +80",
+    "modality": "Single fight 80",
     "medals": 0,
     "record": "5 golds, 1 silver, 3 bronzes",
     "picture": "https://e00-xlk-ue-marca.uecdn.es/uploads/2023/11/21/16236670205575.jpeg"
