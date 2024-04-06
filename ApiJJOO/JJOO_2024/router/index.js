@@ -10,7 +10,7 @@ const modalityController = require('../controllers/modalityController');
 module.exports = () => {
     router.get('/', mainController.home);
 
-    router.get('/about', mainController.about);
+    router.get('/error', mainController.error);
 
     router.get('/athletes', athleteController.getAllAthlete);
 

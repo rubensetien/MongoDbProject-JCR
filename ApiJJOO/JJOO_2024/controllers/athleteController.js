@@ -21,6 +21,11 @@ exports.searchAthlete = async (req, res) => {
 
         const athletes = await Athlete.find(query);
         
+        if (athletes.length === 0) {
+            // Si no se encuentran atletas, renderizar una vista de error personalizada
+            return res.render('error', { message: 'No athletes found' });
+        }
+
         // Renderizar la vista con los atletas encontrados
         res.render('athleteSearch', { athletes });
     } catch (error) {

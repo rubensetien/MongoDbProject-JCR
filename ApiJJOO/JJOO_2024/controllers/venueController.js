@@ -27,6 +27,11 @@ exports.searchVenue = async (req, res) => {
         }
 
         const venues = await Venue.find(query);
+
+        if (venues.length === 0) {
+            // Si no se encuentran atletas, renderizar una vista de error personalizada
+            return res.render('error', { message: 'No venues found' });
+        }
         
         // Renderizar la vista con los atletas encontrados
         res.render('venueSearch', { venues });

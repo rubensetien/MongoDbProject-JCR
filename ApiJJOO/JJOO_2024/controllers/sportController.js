@@ -18,6 +18,11 @@ exports.searchSport = async (req, res) => {
         query[field] = { $regex: q, $options: 'i' };
 
         const sports = await Sport.find(query);
+
+        if (sports.length === 0) {
+            // Si no se encuentran atletas, renderizar una vista de error personalizada
+            return res.render('error', { message: 'No sports found' });
+        }
         
         // Renderizar la vista con los atletas encontrados
         res.render('sportSearch', { sports });
