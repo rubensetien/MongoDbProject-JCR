@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports</title>
+    <title>Sports Search Results</title>
     <style>
-      #countdown {
+              #countdown {
         text-align: center;
         background-color: #f8f9fa;
         padding: 20px;
@@ -64,15 +65,6 @@
         color: white;
         text-decoration: none;
       }
-      li {
-
-margin: 10px 0;
-
-padding: 15px;
-
-border-radius: 5px;
-
-}
       section {
         padding: 20px;
       }
@@ -111,37 +103,37 @@ border-radius: 5px;
       h1, h2 {
         color: #333;
       }
-      a:hover{
+      li {
+
+          margin: 10px 0;
+
+          padding: 15px;
+
+          border-radius: 5px;
+
+        }
+        a:hover{
             color: blue;
         }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <a href="/">
-        <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png" alt="Logo">
-      </a>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="venues">Venues</a></li>
-          <li><a href="sports">Sports</a></li>
-          <li><a href="athletes">Athletes</a></li>
-          <li><a href="country">Countries</a></li>
-        </ul>
-      </nav>
+        <a href="/"></ahref>
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/venues">Venues</a></li>
+                <li><a href="/sports">Sports</a></li>
+                <li><a href="/athletes">Athletes</a></li>
+                <li><a href="/country">Countries</a></li>
+            </ul>
+        </nav>
     </header>
-    <section>
-      <h1>Sports</h1>
-      <form class="search-form" action="/sportSearch" method="get">
-        <select name="field">
-          <option value="name">Name</option>
-          <option value="description">Description</option>
-          <option value="history">History</option>
-        </select>
-        <input type="text" name="q" placeholder="Search...">
-        <input type="submit" value="Search">
-      </form>
+    <h1>Sports Search Results</h1>
       <div class="sports-grid">
         <%sports.forEach(sport=> { %>
           <div class="sport-card">
@@ -154,8 +146,5 @@ border-radius: 5px;
           </div>
         <%}); %>
       </div>
-    </section>
-    <script>
-    </script>
   </body>
 </html>

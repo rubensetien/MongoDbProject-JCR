@@ -3,41 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports</title>
+    <title>Error</title>
     <style>
-      #countdown {
-        text-align: center;
-        background-color: #f8f9fa;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 20px auto;
-        width: 50%;
-      }
-      .search-form {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-      .search-form input[type="text"] {
-        width: 200px;
-        height: 30px;
-        border: none;
-        padding: 5px;
-        border-radius: 5px;
-        margin-right: 10px;
-      }
-      .search-form input[type="submit"] {
-        height: 30px;
-        border: none;
-        background-color: #4CAF50;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .search-form input[type="submit"]:hover {
-        background-color: #45a049;
-      }
       body {
         font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
         margin: 0;
@@ -64,26 +31,18 @@
         color: white;
         text-decoration: none;
       }
-      li {
-
-margin: 10px 0;
-
-padding: 15px;
-
-border-radius: 5px;
-
-}
       section {
         padding: 20px;
       }
-      h1, h2 {
+      h1, h2,h3,h4,h5 {
         color: #333;
       }
-      .carousel-item img {
-        height: 300px;
-        width: 100%;
-        object-fit: contain;
-      }
+      h2, h3, h4, h5 {
+    font-size: 18px; 
+  }
+  h1 {
+    font-size: 24px; 
+  }
       .sports-container {
         display: flex;
         flex-wrap: wrap;
@@ -108,8 +67,14 @@ border-radius: 5px;
         height: auto;
         border-radius: 10px;
       }
-      h1, h2 {
-        color: #333;
+      li {
+
+          margin: 10px 0;
+
+          padding: 15px;
+
+          border-radius: 5px;
+
       }
       a:hover{
             color: blue;
@@ -132,28 +97,11 @@ border-radius: 5px;
       </nav>
     </header>
     <section>
-      <h1>Sports</h1>
-      <form class="search-form" action="/sportSearch" method="get">
-        <select name="field">
-          <option value="name">Name</option>
-          <option value="description">Description</option>
-          <option value="history">History</option>
-        </select>
-        <input type="text" name="q" placeholder="Search...">
-        <input type="submit" value="Search">
-      </form>
-      <div class="sports-grid">
-        <%sports.forEach(sport=> { %>
-          <div class="sport-card">
-            <img src='<%= sport.picture %>' style="width: 100px; height: 100px;">
-            <h2><%= sport.name %></h2>
-            <strong>Description:</strong>
-            <%= sport.description %><br>
-            <strong>History:</strong>
-            <%= sport.history %><br>
-          </div>
-        <%}); %>
-      </div>
+      <h1>Result not found</h1>
+      <h2>The project was developed by Jorge Otero, Celia Becerril, and Rubén Setien as part of their academic activities for the Database II course within the Computer Engineering degree program offered at the European University of the Atlantic. Instead of showing a regular error page we want to talk about us. </h2>
+     <h3>Jorge: jorge.otero@alumnos.uneatlantico.es</h3>
+     <h4>Celia: celia.becerril@alumnos.uneatlantico.es</h4>
+     <h5>Rubén: ruben.setien@alumnos.uneatlantico.es</h5>
     </section>
     <script>
     </script>

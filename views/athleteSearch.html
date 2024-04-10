@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countries</title>
+    <title>Athletes Search Results</title>
     <style>
         #countdown {
             text-align: center;
@@ -18,20 +17,23 @@
 
         ul {
             list-style-type: none;
-
+           
             padding: 0;
-
+           
         }
 
         li {
 
             margin: 10px 0;
-
+           
             padding: 15px;
-
+            
             border-radius: 5px;
-
+            
         }
+
+
+
 
         .search-form {
             display: flex;
@@ -68,13 +70,12 @@
         }
 
         body {
-            font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
-
+           font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
             text-align: center;
-
+            
         }
 
         header {
@@ -82,7 +83,7 @@
             color: white;
             padding: 10px 0;
             text-align: center;
-
+           
         }
 
         header img {
@@ -94,7 +95,7 @@
             list-style-type: none;
             padding: 0;
             text-align: center;
-
+           
         }
 
         nav ul li {
@@ -107,28 +108,12 @@
             text-decoration: none;
         }
 
-        form+ul li {
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid #000;
-            background-color: #f8f9fa;
-            color: #333;
-            font-family: Arial, sans-serif;
-            transition: background-color 0.3s ease;
-        }
-
-        form+ul li:hover {
-            background-color: #e8e9ea;
-           
-        }
 
         section {
             padding: 20px;
         }
 
-        h1,
-        h2 {
+        h1,h2 {
             color: #333;
         }
 
@@ -137,62 +122,63 @@
             width: 100%;
             object-fit: contain;
         }
+        .athletes-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 20px;
+        }
+
+        .athlete-card {
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .athlete-card img {
+            width: 100%; 
+            height: auto;
+            object-fit: cover; 
+            border-radius: 5px; 
+        }
         a:hover{
             color: blue;
         }
     </style>
 </head>
-
 <body>
     <header>
         <a href="/"></ahref>
             <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
                 alt="Logo">
-
         </a>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="venues">Venues</a></li>
-                <li><a href="sports">Sports</a></li>
-                <li><a href="athletes">Athletes</a></li>
-                <li><a href="country">Countries</a></li>
+                <li><a href="/venues">Venues</a></li>
+                <li><a href="/sports">Sports</a></li>
+                <li><a href="/athletes">Athletes</a></li>
+                <li><a href="/country">Countries</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Countries</h1>
-    <form class="search-form" action="/countrySearch" method="get">
-        <select name="field">
-            <option value="country">Country</option>
-            <option value="acronym">Acronym</option>
-            <option value="capital">Capital</option>
-            <option value="population">Population</option>
-        </select>
-        <input type="text" name="q" placeholder="Search...">
-        <input type="submit" value="Search">
-    </form>
-
-    <ul>
-        <% countries.sort((a, b)=> a.country.localeCompare(b.country)).forEach(country => { %>
-
-            <li>
-                <img src='<%= country.flag %>' style="width: 150px; height: 100px;">
-
-                <h2>
-                    <%= country.country %>
-                </h2>
-                <p>Acronym: <%= country.acronym %>
-                </p>
-                <p>Capital: <%= country.capital %>
-                </p>
-                <p>Population: <%= country.population %>
-                </p>
-
-            </li>
-            <% }) %>
-
-
-    </ul>
+    <nav>
+        <!-- Barra de navegación -->
+    </nav>
+    <h1>Athlete Search Results</h1>
+    <div class="athletes-grid">
+      <% athletes.sort((a, b) => a.name.localeCompare(b.name)).forEach(athlete => { %>
+            <div class = "athlete-card">
+              <img src='<%= athlete.picture %>' style="width: 100px; height: 175px;">
+              <h2><%= athlete.name %></h2>
+              <p><strong>Country:</strong> <%= athlete.country %></p>
+              <p><strong>Team:</strong> <%= athlete.team %></p>
+              <p><strong>Age:</strong> <%= athlete.age %></p>
+              <p><strong>Gender:</strong> <%= athlete.gender %></p>
+              <p><strong>Modality:</strong> <a href="/modality?modality=<%= athlete.modality %>"><%= athlete.modality %></a></p>
+              <p><strong>Medals:</strong> <%= athlete.medals %></p>
+              </div>
+        <% }); %>
+    </div>
 </body>
-
 </html>
