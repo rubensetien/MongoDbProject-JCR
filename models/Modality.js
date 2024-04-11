@@ -4,14 +4,14 @@ const mongoose = require('mongoose');
 const modalitySchema = new mongoose.Schema({
     name : {type: String},
     category: {type: String},
-    sport: {type: String},
-    start_date: {type: Date},
-    end_date: {type: Date},
-    venue: {type: String},
+    sport: {type: String, index:true},
+    start_date: {type: Date, index:true},
+    end_date: {type: Date, index:true},
+    venue: {type: String, index:true},
     description: {type: String},
     result: {type: String},
     status: {type: String},
-    transmission: {type: String},
+    transmission: {type: String, index:true},
     //picture: {type: String}
 });
 
