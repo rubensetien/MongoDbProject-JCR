@@ -136,6 +136,9 @@
             width: 100%;
             object-fit: contain;
         }
+        a:hover{
+            color: blue;
+        }
     </style>
 </head>
 
@@ -156,17 +159,6 @@
         </nav>
     </header>
     <h1>Country Search Results</h1>
-    <form class="search-form" action="/countrySearch" method="get">
-        <select name="field">
-            <option value="country">Country</option>
-            <option value="acronym">Acronym</option>
-            <option value="capital">Capital</option>
-            <option value="population">Population</option>
-        </select>
-        <input type="text" name="q" placeholder="Search...">
-        <input type="submit" value="Search">
-    </form>
-
     <ul>
         <% countries.sort((a, b)=> a.country.localeCompare(b.country)).forEach(country => { %>
 
@@ -174,7 +166,7 @@
                 <img src='<%= country.flag %>' style="width: 150px; height: 100px;">
 
                 <h2>
-                    <%= country.country %>
+                        <%= country.country %>
                 </h2>
                 <p>Acronym: <%= country.acronym %>
                 </p>
@@ -183,9 +175,7 @@
                 <p>Population: <%= country.population %>
                 </p>
             </li>
-            <% }) %>
-
-
+        <% }) %>
     </ul>
 </body>
 
