@@ -22,13 +22,10 @@ exports.searchAthlete = async (req, res) => {
         // Iniciar contador
         console.log('Start searchAthlete');
         const startTime = new Date().getTime();
-
         const athletes = await Athlete.find(query);
-        
-        // Detener contador y mostrar el tiempo transcurrido
-        const endTime = new Date().getTime();
-        console.log(`End searchAthlete. Time: ${endTime - startTime} ms`);
-
+             // Detener contador y mostrar el tiempo transcurrido
+             const endTime = new Date().getTime();
+             console.log(`End searchAthlete. Time: ${endTime - startTime} ms`);
         if (athletes.length === 0) {
             // Si no se encuentran atletas, renderizar una vista de error personalizada
             return res.render('error', { message: 'No athletes found' });
