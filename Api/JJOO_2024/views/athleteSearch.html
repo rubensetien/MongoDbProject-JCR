@@ -170,6 +170,10 @@
         <!-- Barra de navegación -->
     </nav>
     <h1>Athlete Search Results</h1>
+    <div id="countdown">
+        <p>Number of results: <%= numResults %></p>
+        <p>Time taken to retrieve results: <%= elapsedTime %> ms</p>
+    </div>
     <div class="athletes-grid">
       <% athletes.sort((a, b) => a.name.localeCompare(b.name)).forEach(athlete => { %>
             <div class = "athlete-card">

@@ -20,24 +20,26 @@ exports.searchAthlete = async (req, res) => {
         }
 
         // Iniciar contador
-        console.log('Start searchAthlete');
         const startTime = new Date().getTime();
         const athletes = await Athlete.find(query);
-             // Detener contador y mostrar el tiempo transcurrido
-             const endTime = new Date().getTime();
-             console.log(`End searchAthlete. Time: ${endTime - startTime} ms`);
+        // Detener contador y mostrar el tiempo transcurrido
+        const endTime = new Date().getTime();
+        const elapsedTime = endTime - startTime;
+        console.log(`Search time: ${elapsedTime} ms`);
+
         if (athletes.length === 0) {
             // Si no se encuentran atletas, renderizar una vista de error personalizada
             return res.render('error', { message: 'No athletes found' });
         }
 
-        // Renderizar la vista con los atletas encontrados
-        res.render('athleteSearch', { athletes });
+        // Renderizar la vista con los atletas encontrados, el tiempo transcurrido y el número de resultados
+        res.render('athleteSearch', { athletes, elapsedTime, numResults: athletes.length });
     } catch (error) {
         console.error('Error searching athletes:', error);
         res.status(500).json({ error: 'Internal server error' });
     }
 }
+
 
 exports.getAllAthlete = async (req, res) => {
     try {
