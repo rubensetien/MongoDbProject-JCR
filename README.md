@@ -6,6 +6,9 @@ Este repositorio contiene el código y la documentación para el proyecto de la 
 
 El proyecto tiene como objetivo desarrollar una api utilizando Express y MongoDb. Se enfoca en aplicar los conceptos y técnicas aprendidas en la asignatura de Bases de Datos 2, abordando aspectos como trabajo con la base de datos, colecciones, agregaciones, índices, relaciones, etc.
 
+## Rama Proyecto Completo 
+main2
+
 ## Integrantes del Equipo
 
 - **Jorge Otero Gonzalez**
