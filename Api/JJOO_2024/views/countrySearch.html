@@ -159,6 +159,11 @@
         </nav>
     </header>
     <h1>Country Search Results</h1>
+    <div id="countdown">
+        <p>Number of results: <%= numResults %></p>
+        <p>Time taken to retrieve results: <%= elapsedTime %> ms</p>
+    </div>
+    
     <ul>
         <% countries.sort((a, b)=> a.country.localeCompare(b.country)).forEach(country => { %>
 
