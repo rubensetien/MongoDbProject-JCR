@@ -1,8 +1,8 @@
 
-#API utilizando Express y MongoDB
+# API utilizando Express y MongoDB
 Esta es una API desarrollada utilizando Express.js como framework web y MongoDB como base de datos NoSQL. La API proporciona endpoints para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre recursos específicos.
 
-##Inicialización de la Base de Datos
+## Inicialización de la Base de Datos
 El proyecto incluye un script llamado importData.js, el cual es responsable de inicializar la base de datos con datos iniciales antes de ejecutar la API. A continuación se explica cómo funciona este script:
 
 -*Importación de módulos: El script comienza importando los módulos necesarios, incluyendo mongoose para la interacción con la base de datos y fs para la lectura de archivos.*
