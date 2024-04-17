@@ -17,7 +17,11 @@ exports.searchSport = async (req, res) => {
 
         query[field] = { $regex: q, $options: 'i' };
 
+        const startTime = new Date().getTime();
         const sports = await Sport.find(query);
+        const endTime = new Date().getTime();
+        const elapsedTime = endTime - startTime;
+        console.log(`Search time: ${elapsedTime} ms`);
 
         if (sports.length === 0) {
             // Si no se encuentran atletas, renderizar una vista de error personalizada
@@ -25,7 +29,7 @@ exports.searchSport = async (req, res) => {
         }
         
         // Renderizar la vista con los atletas encontrados
-        res.render('sportSearch', { sports });
+        res.render('sportSearch', { sports,  elapsedTime, numResults: sports.length });
     } catch (error) {
         console.error('Error searching sports:', error);
         res.status(500).json({ error: 'Internal server error' });
