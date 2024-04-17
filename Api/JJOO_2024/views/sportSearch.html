@@ -134,6 +134,10 @@
         </nav>
     </header>
     <h1>Sports Search Results</h1>
+    <div id="countdown">
+      <p>Number of results: <%= numResults %></p>
+      <p>Time taken to retrieve results: <%= elapsedTime %> ms</p>
+  </div>
       <div class="sports-grid">
         <%sports.forEach(sport=> { %>
           <div class="sport-card">
