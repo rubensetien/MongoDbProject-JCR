@@ -31,7 +31,11 @@ exports.searchCountry = async (req, res) => {
         }
 
         // Ejecutar la consulta en la base de datos
+        const startTime = new Date().getTime();
         const countries = await Country.find(query);
+        const endTime = new Date().getTime();
+        const elapsedTime = endTime - startTime;
+        console.log(`Search time: ${elapsedTime} ms`);
 
         if (countries.length === 0) {
             // Si no se encuentran países, renderizar una vista de error personalizada
@@ -40,7 +44,7 @@ exports.searchCountry = async (req, res) => {
         
         
         // Renderizar la vista con los países encontrados
-        res.render('countrySearch', { countries });
+        res.render('countrySearch', { countries, elapsedTime, numResults: countries.length });
     } catch (error) {
         console.error('Error searching countries:', error);
         res.status(500).json({ error: 'Internal server error' });
