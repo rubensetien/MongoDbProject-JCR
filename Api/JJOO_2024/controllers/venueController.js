@@ -1,42 +1,202 @@
-const Venue = require('../models/Venue');
+<!DOCTYPE html>
+<html lang="en">
 
-exports.getAllVenue = async (req, res) => {
-    try {
-        const venues = await Venue.find();
-        res.render('venue', { venues });
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Failed to retrieve venues');
-    }
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venues Search Results</title>
+    <style>
+              #countdown {
+        text-align: center;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        width: 50%;
+      }
+        li {
 
-exports.searchVenue = async (req, res) => {
-    try {
-        const { q, field } = req.query;
-        const query = {};
+            margin: 10px 0;
 
-        // Verificar si q es un número
-        const isNumber = !isNaN(q);
+            padding: 15px;
 
-        // Si el campo es 'age' y q es un número, buscar por edad exacta
-        if (field === 'capacity' && isNumber) {
-            query[field] = q;
-        } else {
-            // De lo contrario, buscar como texto
-            query[field] = { $regex: q, $options: 'i' };
+            border-radius: 5px;
+
         }
 
-        const venues = await Venue.find(query);
-
-        if (venues.length === 0) {
-            // Si no se encuentran atletas, renderizar una vista de error personalizada
-            return res.render('error', { message: 'No venues found' });
+        #countdown p {
+            
+            margin: 0 10px;
+            font-size: 16px;
         }
-        
-        // Renderizar la vista con los atletas encontrados
-        res.render('venueSearch', { venues });
-    } catch (error) {
-        console.error('Error searching venues:', error);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-}
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-form input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-form input[type="submit"] {
+            height: 30px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        body {
+            font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header img {
+            height: 80px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .carousel-item img {
+            height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+
+        .container {
+            position: relative;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        .container img {
+            width: 100%;
+            height: 200%;
+            object-fit: cover;
+        }
+
+        .container::before {
+            content: "";
+            background-image: url('https://cdn.sortiraparis.com/images/80/74061/614960-paris-2024-la-carte-complete-des-sites-olympiques-devoilee.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container h1,
+        .container h2 {
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/"></ahref>
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/venues">Venues</a></li>
+                <li><a href="/sports">Sports</a></li>
+                <li><a href="/athletes">Athletes</a></li>
+                <li><a href="/country">Countries</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Venues Search Results</h1>
+    <div id="countdown">
+        <p>Number of results: <%= numResults %></p>
+        <p>Time taken to retrieve results: <%= elapsedTime %> ms</p>
+    </div>
+    <div class="card">
+        <% venues.forEach(venue=> { %>
+            <li>
+                <div class="container">
+                    <div>
+                        <img src='<%= venue.picture %>' style="width: 100px; height: 175px;">
+                        <h2>
+                            <%= venue.name %>
+                        </h2>
+                        <strong>Sport:</strong>
+                        <%= venue.sport %><br>
+                    </div>
+                    <div>
+
+                        <strong>Location:</strong>
+                        <%= venue.location %><br>
+                            <strong>Capacity:</strong>
+                            <%= venue.capacity %><br>
+                                <strong>Status:</strong>
+                                <%= venue.status %><br>
+                                    <div id="map<%= venue.id %>" style="height: 400px; width: 100%;"></div>
+                    </div>
+                </div>
+            </li>
+            <% }); %>
+    </div>
+</body>
+
+</html>
