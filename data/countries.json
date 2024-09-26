@@ -1,0 +1,250 @@
+[
+  {
+    "country": "Australia",
+    "acronym": "AUS",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg",
+    "capital": "Canberra",
+    "population": "25.650.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Belarus",
+    "acronym": "BLR",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/640px-Flag_of_Belarus.svg.png",
+    "capital": "Minsk",
+    "population": "9.400.000",
+    "representatives": "Still to be determined\r\n"
+  },
+  {
+    "country": "Belgium",
+    "acronym": "BEL",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/1200px-Flag_of_Belgium.svg.png",
+    "capital": "Brussels",
+    "population": "11.500.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Brazil",
+    "acronym": "BRA",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png",
+    "capital": "Brasilia",
+    "population": "212.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Canada",
+    "acronym": "CAN",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/800px-Flag_of_Canada_%28Pantone%29.svg.png",
+    "capital": "Ottawa",
+    "population": "38.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "China",
+    "acronym": "CHN",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/640px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+    "capital": "Beijing",
+    "population": "1.400.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Colombia",
+    "acronym": "COL",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png",
+    "capital": "Bogotá",
+    "population": "50.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Croatia",
+    "acronym": "HRV",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg",
+    "capital": "Zagrev",
+    "population": "3 899 000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "Cuba",
+    "acronym": "CUB",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/1200px-Flag_of_Cuba.svg.png",
+    "capital": "La Habana",
+    "population": "11.200.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Denmark",
+    "acronym": "DNK",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1200px-Flag_of_Denmark.svg.png",
+    "capital": "Copenhagen",
+    "population": "5.800.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Ecuador",
+    "acronym": "ECU",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg",
+    "capital": "Quito",
+    "population": "17.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "England",
+    "acronym": "ENG",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",
+    "capital": "London",
+    "population": "55 980 000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "France",
+    "acronym": "FRA",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+    "capital": "Paris",
+    "population": "67.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Germany",
+    "acronym": "DEU",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Germany_%283-2%29.svg/220px-Flag_of_Germany_%283-2%29.svg.png",
+    "capital": "Berlin",
+    "population": "83.200.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Great Britain",
+    "acronym": "GBR",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1280px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
+    "capital": "London",
+    "population": "66970000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Greece",
+    "acronym": "GRC",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/640px-Flag_of_Greece.svg.png",
+    "capital": "Athens",
+    "population": "10.400.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Hungary",
+    "acronym": "HUN",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/800px-Flag_of_Hungary.svg.png",
+    "capital": "Budapest",
+    "population": "9 710 000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "Italy",
+    "acronym": "ITA",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png",
+    "capital": "Rome",
+    "population": "59.110.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Jamaica",
+    "acronym": "JAM",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/1200px-Flag_of_Jamaica.svg.png",
+    "capital": "Kingston",
+    "population": "2.900.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Japan",
+    "acronym": "JPN",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/200px-Flag_of_Japan.svg.png",
+    "capital": "Tokyo",
+    "population": "126.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Netherlands",
+    "acronym": "NLD",
+    "flag": "https://franciscotorreblanca.es/wp-content/uploads/2018/11/origen-nombre-paises-paises-bajos.png",
+    "capital": "Amsterdam",
+    "population": "17.500.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Norway",
+    "acronym": "NOR",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Flag_of_Norway_%283-2%29.svg/2560px-Flag_of_Norway_%283-2%29.svg.png",
+    "capital": "Oslo",
+    "population": "5.400.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Poland",
+    "acronym": "POL",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg",
+    "capital": "Warsaw",
+    "population": "38.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Serbia",
+    "acronym": "SRB",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/220px-Flag_of_Serbia.svg.png",
+    "capital": "Belgrade",
+    "population": "7.000.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Slovenia",
+    "acronym": "SVN",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/1200px-Flag_of_Slovenia.svg.png",
+    "capital": "Ljubljana",
+    "population": "2.100.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "South Africa",
+    "acronym": "ZAF",
+    "flag": "https://billiken.lat/wp-content/uploads/2023/07/sudafrica.png",
+    "capital": "Pretoria",
+    "population": "59.620.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "South Korea",
+    "acronym": "KOR",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/800px-Flag_of_South_Korea.svg.png",
+    "capital": "Seoul",
+    "population": "51.800.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Spain",
+    "acronym": "ESP",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/800px-Bandera_de_Espa%C3%B1a.svg.png",
+    "capital": "Madrid",
+    "population": "47.420.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Sweden",
+    "acronym": "SWE",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/1280px-Flag_of_Sweden.svg.png",
+    "capital": "Stockholm",
+    "population": "10.400.000",
+    "representatives": "Still to be determined"
+  },
+  {
+    "country": "Türkiye",
+    "acronym": "TUR",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/1200px-Flag_of_Turkey.svg.png",
+    "capital": "Ankara",
+    "population": "82.000.000",
+    "representatives": "still to be determined"
+  },
+  {
+    "country": "United States of America",
+    "acronym": "USA",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+    "capital": "Washington D.C.",
+    "population": "331.000.000",
+    "representatives": "still to be determined"
+  }
+]

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Search Results</title>
+    <style>
+              #countdown {
+        text-align: center;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        width: 50%;
+      }
+      .search-form {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .search-form input[type="text"] {
+        width: 200px;
+        height: 30px;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .search-form input[type="submit"] {
+        height: 30px;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .search-form input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      body {
+        font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        text-align: center;
+        /* Alinea todo el texto del cuerpo al centro */
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        /* Alinea todo el texto del encabezado al centro */
+      }
+      header img {
+        height: 80px;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      section {
+        padding: 20px;
+      }
+      h1, h2 {
+        color: #333;
+      }
+      .carousel-item img {
+        height: 300px;
+        width: 100%;
+        object-fit: contain;
+      }
+      .sports-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+      }
+      .sport-card {
+        flex: 0 1 calc(25% - 40px);
+        margin: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+      .sport-card:hover {
+        transform: scale(1.05);
+      }
+      .sport-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      h1, h2 {
+        color: #333;
+      }
+      li {
+
+          margin: 10px 0;
+
+          padding: 15px;
+
+          border-radius: 5px;
+
+        }
+        a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/"></ahref>
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/venues">Venues</a></li>
+                <li><a href="/sports">Sports</a></li>
+                <li><a href="/athletes">Athletes</a></li>
+                <li><a href="/country">Countries</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Sports Search Results</h1>
+      <div class="sports-grid">
+        <%sports.forEach(sport=> { %>
+          <div class="sport-card">
+            <img src='<%= sport.picture %>' style="width: 100px; height: 100px;">
+            <h2><%= sport.name %></h2>
+            <strong>Description:</strong>
+            <%= sport.description %><br>
+            <strong>History:</strong>
+            <%= sport.history %><br>
+          </div>
+        <%}); %>
+      </div>
+  </body>
+</html>

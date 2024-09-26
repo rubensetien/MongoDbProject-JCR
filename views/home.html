@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        #countdown {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        #countdown {
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        #countdown p {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+
+            padding: 0;
+
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-form input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-form input[type="submit"] {
+            height: 30px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        body {
+            font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+
+        }
+
+        header img {
+            height: 80px;
+        }
+
+        nav {
+            text-align: center;
+            /* Centrar el menú */
+        }
+
+        li {
+
+            margin: 10px 0;
+
+            padding: 15px;
+
+            border-radius: 5px;
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .carousel-item img {
+            height: 350px;
+            width: 100%;
+            object-fit: contain;
+            transition: transform 2s ease;
+        }
+
+        .carousel-indicators li {
+            width: 0px;
+            height: 0px;
+            background-color: #888;
+            border: none;
+            /* Añade esto */
+            margin: 0;
+            /* Y esto */
+        }
+
+        .carousel-indicators {
+            display: none;
+        }
+        a:hover{
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="/"></ahref>
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/venues">Venues</a></li>
+                <li><a href="/sports">Sports</a></li>
+                <li><a href="/athletes">Athletes</a></li>
+                <li><a href="/country">Countries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section>
+        <h1><strong>OLYMPIC GAMES</strong></h1>
+
+        <h2>Paris 2024</h2>
+        <p>26th July to 11th August 2024</p>
+        <div id="countdown">
+            <p id="days"></p>
+            <p id="hours"></p>
+            <p id="minutes"></p>
+            <p id="seconds"></p>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+            </ol>
+
+            <div class="carousel-inner" data-interval="4000">
+                <div class="carousel-item active">
+                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562434257.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562621096.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117562821449.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563188754.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/9AC5/production/_119712693_fd71f052-59b9-4d88-8e8f-5dea6459b459.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563370636.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117563798204.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564291141.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564398523.jpg">
+                </div>
+                <div class="carousel-item" data-interval="4000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117564682074.jpg">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img
+                        src="https://www.atlantico.net/asset/thumbnail,1280,720,center,center/media/atlantico/images/2021/07/31/2021073117572922917.jpg">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </section>
+
+
+    <script>
+
+
+        var countDownDate = new Date("Jul 26, 2024 00:00:00").getTime();
+
+
+        var countdownFunction = setInterval(function () {
+
+
+            var now = new Date().getTime();
+
+
+            var distance = countDownDate - now;
+
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+            document.getElementById("days").innerHTML = days + " Days ";
+            document.getElementById("hours").innerHTML = hours + " Hours ";
+            document.getElementById("minutes").innerHTML = minutes + " Minutes ";
+            document.getElementById("seconds").innerHTML = seconds + " Seconds ";
+
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "¡Los Juegos Olímpicos de París 2024 han comenzado!";
+            }
+        }, 1000);
+    </script>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

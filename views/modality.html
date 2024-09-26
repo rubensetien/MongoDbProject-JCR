@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modality</title>
+    <style>
+        #countdown {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+
+            margin: 10px 0;
+
+            padding: 15px;
+
+            border-radius: 5px;
+
+         }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-form input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-form input[type="submit"] {
+            height: 30px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        body {
+            font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header img {
+            height: 80px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .container {
+            position: relative;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        .container h1,
+        .container h2 {
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .carousel-item img {
+            height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .venues-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .venue-card {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            flex: 0 0 calc(20% - 5px);
+            margin-bottom: 20px;
+            height: 200px;
+        }
+
+        .venue-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .modality-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .modality-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            transform: scale(1.05);
+        }
+
+        .modality-card h2 {
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .modality-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="/">
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="venues">Venues</a></li>
+                <li><a href="sports">Sports</a></li>
+                <li><a href="athletes">Athletes</a></li>
+                <li><a href="country">Countries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Modality</h1>
+
+    <div class="modality-details">
+        <% modalities.forEach(modality => { %>
+        <div class="modality-card">
+            <h2><%= modality.name %></h2>
+            <p><strong>Category:</strong> <%= modality.category %></p>
+            <p><strong>Sport:</strong> <%= modality.sport %></p>
+            <p><strong>Start Date:</strong> <%= modality.start_date %></p>
+            <p><strong>End Date:</strong> <%= modality.end_date %></p>
+            <p><strong>Venue:</strong> <%= modality.venue %></p>
+            <p><strong>Description:</strong> <%= modality.description %></p>
+            <p><strong>Result:</strong> <%= modality.result %></p>
+            <p><strong>Status:</strong> <%= modality.status %></p>
+            <p><strong>Transmission:</strong> <%= modality.transmission %></p>
+        </div>
+        <% }); %>
+    </div>
+</body>
+
+</html>

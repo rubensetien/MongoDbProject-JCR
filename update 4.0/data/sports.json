@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Athletics",
+    "description": "Set of sports practices, aimed at overcoming opponents in speed or endurance, either in distance or in higher jump height",
+    "picture":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg0C1HktD2pP27fmv1XGz1LKEyUaEKHr2eXIflCHMWWA&s.png",
+    "history": "This sport is considered the oldest organized sport in the world. The first historical reference to athletics dates back to 776 BC in Greece, with a list of the winning athletes of a competition"
+ 
+  },
+  {
+    "name": "Basketball",
+    "description": "Basketball is a team sport in which two teams, most commonly of five players each, opposing one another on a rectangular court, compete with the primary objective of shooting a basketball through the defender's hoop while preventing the opposing team from",
+    "picture":"https://e00-xlk-ue-marca.uecdn.es/uploads/2023/11/30/16758621629743.png",
+    "history": "The game was invented in 1891 by Dr. James Naismith, who would be the first basketball coach of the Kansas Jayhawks, one of the most successful programs in the game's history."
+  },
+  {
+    "name": "Cycling",
+   "description": "Cycling, also called biking or bicycling, is the use of bicycles for transport, recreation, exercise or sport. People engaged in cycling are referred to as \"cyclists\", \"bikers\", or less commonly, as \"bicyclists\". Apart from two-wheeled bicycles, \"cycling\"",
+   "picture":"https://e00-xlk-ue-marca.uecdn.es/uploads/2023/11/30/16758629675678.png",
+   "history": "Bicycles were introduced in the 19th century and now number about one billion worldwide. They are the principal means of transportation in many parts of the world."
+  },
+  {
+    "name": "Field Hockey",
+    "description": "Is a team sport structured in standard hockey format, in which each team plays with 11 players in total, made up of 10 field players and a goalkeeper. Teams must move a hockey ball around a pitch by hitting it with a hockey stick towards the rival team's shooting circle and then into the goal",
+    "picture":"https://medias.paris2024.org/uploads/2023/02/PARIS-2024-VISUALS-PICTOGRAMMES-HOCKEY-1-1.jpg",
+    "history": "There are historical records which suggest early forms of hockey were played in Egypt and Persia c. 2000 BC, and in Ethiopia c. 1000 BC."
+  },
+  {
+    "name": "Football",
+    "description": "Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified, the word football normally means the form of football that is the most popular where the word is used. Sports commonly called football inclu",
+    "picture":"https://e00-xlk-ue-marca.uecdn.es/uploads/2023/11/30/16758635510246.png",
+    "history": "The history of football in general is a long and detailed one, but the sport as we know it today is quite different from how it was in the past. It has evolved into the game that we know today. The game of football has a history of constant evolution and change. The rules of the game have been altered and refined over the years, but the basic concept remains the same."
+  },
+  {
+    "name": "Gymnastics",
+    "description": "Gymnastics is a sport that includes exercises requiring balance, strength, flexibility, agility, coordination, and endurance. The movements involved in gymnastics contribute to the development of the arms, legs, shoulders, back, chest, and abdominal muscl",
+    "picture":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYSu791sDeTZgXJJFoaZlckGFcsnqLyhLY4IusBSoLHw&s.png",
+    "history": "Gymnastics evolved from exercises used by the ancient Greeks that included skills for mounting and dismounting a horse, and from circus performance skills."
+  },
+  {
+    "name": "Handball",
+    "description": "Handball is a team sport in which two teams of seven players each pass a ball using their hands with the aim of throwing it into the goal of the other team. A standard match consists of two periods of 30 minutes, and the team that scores more goals wins. ",
+    "picture":"https://e00-xlk-ue-marca.uecdn.es/uploads/2023/11/30/16758640187890.png",
+    "history": "The game was codified at the end of the 19th century in Denmark. The modern set of rules was published in 1917 in Germany, and had several revisions since. The first international games were played under these rules, between Germany and Austria by men in 1925 and between Germany and Austria by women in 1930."
+  },
+  {
+    "name": "Rugby",
+    "description": "Is a robust team sport played with an oval ball. Two teams of 15 players each aim to score points by carrying, passing, or kicking the ball towards the opponent's goal line. It demands strategy, strength, and skillful ball-handling. Rugby promotes camaraderie, sportsmanship, and respect, enjoying global popularity.",
+    "picture":"https://e00-xlk-ue-marca.uecdn.es/uploads/2023/11/30/16758644704341.png",
+    "history": "In 1871, English clubs met to form the Rugby Football Union (RFU). In 1892, after charges of professionalism (compensation of team members) were made against some clubs for paying players for missing work"
+  },
+  {
+    "name": "Swimming",
+    "description": "Swimming is an individual or team sport that requires the use of one/s entire body to move through water The sport takes place in pools or open water Competitive swimming is one of the most popular Olympic sports, with varied distance events in butterfly ",
+    "picture":"https://img.olympics.com/images/image/private/t_s_1_1_g_auto/t_s_w860/f_auto/primary/ojsuigeh2zfgdb2yrdop.png",
+    "history": "Competitive swimming became prominent in the late 19th and early 20th centuries, leading to the standardization of swimming styles and the inclusion of swimming events in the Olympic Games"
+  },
+  {
+    "name": "Taekwondo",
+    "description": "It is also spelled tae kwon do or taekwon-do, is a Korean martial art and combat sport involving punching and kicking techniques. The literal translation for taekwondo is \"kicking\", \"punching\", and \"the art or way of\".[5] It sometimes involves the use of ",
+    "picture":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8XjRwjVvz5QOMY-y51tV7mMkDEaRSJ8tzrQ&s.png",
+    "history": "Taekwondo became an Olympic sport in 2000, showcasing fierce competition across weight categories. Dominated by nations like South Korea, it has grown in popularity, captivating audiences worldwide."
+  },
+  {
+    "name": "Tennis",
+    "description": "Tennis is a racket sport that can be played individually against a single opponent (singles) or between two teams of two players each (doubles). Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt ove",
+    "picture":"https://creapills.com/wp-content/uploads/2023/03/pictogrammes-jeux-olympiques-paris-2024-54.jpg",
+    "history": "The origins of the game can be traced to a 12th–13th-century French handball game called jeu de paume (\"game of the palm\"), from which was derived a complex indoor racket-and-ball game: real tennis. This ancient game is still played to a limited extent and is usually called real tennis in the United Kingdom, court tennis in the United States, and royal tennis in Australia."
+  },
+  {
+    "name": "Waterpolo",
+    "description": "Water polo is a competitive team sport played in water between two teams of seven players each. The game consists of four quarters in which the two teams attempt to score goals by throwing the ball into the opposing team's goal. The team with the most goa",
+    "picture":"https://img.olympics.com/images/image/private/t_original_760/f_auto/primary/vy1fkxkgusexgnbpfr24.png",
+    "history": "The history of water polo as a team sport began as a demonstration of strength and swimming skill in late 19th century England and Scotland, where water sports and racing exhibitions were a feature of county fairs and festivals. It was introduced in the Olympics in 1900."
+  }
+]

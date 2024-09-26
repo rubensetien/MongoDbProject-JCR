@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries Search Results</title>
+    <style>
+        #countdown {
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 50%;
+        }
+
+
+        ul {
+            list-style-type: none;
+
+            padding: 0;
+
+        }
+
+        li {
+
+            margin: 10px 0;
+
+            padding: 15px;
+
+            border-radius: 5px;
+
+        }
+
+        .search-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-form input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-form input[type="submit"] {
+            height: 30px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .country-image {
+            height: 80px;
+            width: auto;
+        }
+
+        body {
+            font-family: "Olympic Sans", Arial, Helvetica, sans-serif;
+
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+
+        }
+
+        header img {
+            height: 80px;
+        }
+
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        form+ul li {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        form+ul li:hover {
+            background-color: #e8e9ea;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .carousel-item img {
+            height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+        a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/"></ahref>
+            <img src="https://www.panamsports.org/wp-content/uploads/2017/11/Paris-2024-New-Olympic-logo.png"
+                alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/venues">Venues</a></li>
+                <li><a href="/sports">Sports</a></li>
+                <li><a href="/athletes">Athletes</a></li>
+                <li><a href="/country">Countries</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Country Search Results</h1>
+    <ul>
+        <% countries.sort((a, b)=> a.country.localeCompare(b.country)).forEach(country => { %>
+
+            <li>
+                <img src='<%= country.flag %>' style="width: 150px; height: 100px;">
+
+                <h2>
+                        <%= country.country %>
+                </h2>
+                <p>Acronym: <%= country.acronym %>
+                </p>
+                <p>Capital: <%= country.capital %>
+                </p>
+                <p>Population: <%= country.population %>
+                </p>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+
+</html>
